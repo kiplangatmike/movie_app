@@ -2,29 +2,29 @@ import React from "react";
 import { GiEternalLove } from "react-icons/gi";
 import { BsCalendar3 } from "react-icons/bs";
 import { FaCompass } from "react-icons/fa";
-import Card from "../UI/Card";
+import FeedCard from "../UI/FeedCard";
 
 const Feed = () => {
   return (
-    <Card>
-      <section className="m-4">
-        <div className="lg:px-8mx-auto gap-8">
-          <div>
-            <h5 className="text-white gap-8">News Feed</h5>
+    <FeedCard>
+      <section className="m-4 ">
+        <div className="lg:px-8mx-auto items-center py-2 ">
+          <div className="gap-12 text-white pb-6">
+            <h5>News Feed</h5>
           </div>
-          <div className="text-white flex flex-row gap-8">
+          <div className="text-white flex flex-row gap-2 items-center pb-3">
             <i>
               <FaCompass />
             </i>
             <h4>Browse</h4>
           </div>
-          <div className="text-white flex flex-row">
+          <div className="text-white flex flex-row gap-2 items-center pb-3">
             <i>
               <GiEternalLove />
             </i>
             <h4>Watch list</h4>
           </div>
-          <div className="text-white flex flex-row">
+          <div className="text-white flex flex-row gap-2 items-center pb-3">
             <i>
               <BsCalendar3 />
             </i>
@@ -32,7 +32,7 @@ const Feed = () => {
           </div>
         </div>
       </section>
-    </Card>
+    </FeedCard>
   );
 };
 
