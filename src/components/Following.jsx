@@ -1,9 +1,9 @@
 import React from "react";
-import FeedCard from "../UI/FeedCard";
+import FollowingCard from "../UI/FollowingCard";
 
 const Following = () => {
   return (
-    <FeedCard>
+    <FollowingCard>
       <div className="text-white p-4">
         <div className="pb-3">
           <h5>following</h5>
@@ -14,7 +14,7 @@ const Following = () => {
         </div>
       </div>
       
-    </FeedCard>
+    </FollowingCard>
   );
 };
 

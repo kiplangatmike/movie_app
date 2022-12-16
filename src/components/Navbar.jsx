@@ -9,7 +9,7 @@ const Navbar = () => {
     <Card>
       <nav className="flex flex-row gap-12 items-center  m-4 px-2 py-4">
         <div className="text-gray-100">
-          <a>Movie Shop</a>
+          <a>movie.HUB</a>
         </div>
         <div className="flex flex-row text-gray-100 gap-2">
           <IoIosArrowBack />

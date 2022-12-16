@@ -28,7 +28,13 @@ const Feed = () => {
             <i>
               <BsCalendar3 />
             </i>
-            <h4>Coming soon</h4>
+            <h4>Movies</h4>
+          </div>
+          <div className="text-white flex flex-row gap-2 items-center pb-3">
+            <i>
+              <BsCalendar3 />
+            </i>
+            <h4>Series</h4>
           </div>
         </div>
       </section>
