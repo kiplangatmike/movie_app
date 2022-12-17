@@ -10,18 +10,26 @@ import Trending from "./components/Trending";
 
 function App() {
   return (
-    <BrowserRouter className="bg-gray-700">
-      <Navbar />
-      <Routes>
+    // <BrowserRouter className="bg-gray-700">
+      <div>
+        <Navbar />
+        <Trending />
+        <Feed />
+        <Hero />
+        <Following />
+        <Logout />
+      </div>
+      
+  //     {<Routes>
         
-        <Route path="/" component={Trending} exact/>
-        <Route path="/feed" component={Feed} />
-        <Route path="/hero" component={Hero}/>
+  //       <Route path="/" component={Trending} exact/>
+  //       <Route path="/feed" component={Feed} />
+  //       <Route path="/hero" component={Hero}/>
         
-        <Route path="/following" component={Following}/>
-        <Route path="/logout" component={Logout}/>
-      </Routes>
-    </BrowserRouter>
+  //       <Route path="/following" component={Following}/>
+  //       <Route path="/logout" component={Logout}/>
+  //     </Routes>
+  //   </BrowserRouter> }
   );
 }
 
