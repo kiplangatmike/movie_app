@@ -2,9 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import SingleCard from "./SingleCard";
 
-
-// const axios = require("axios");
-
 const Trending = () => {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
@@ -13,7 +10,8 @@ const Trending = () => {
     const { data } = await axios.get(
       "http://www.omdbapi.com/?i=tt3896198&apikey=5b731350"
     );
-    setContent(data.results);
+    console.log(JSON.stringify(data));
+    setContent(data);
     console.log(data);
   };
 
@@ -39,16 +37,11 @@ const Trending = () => {
       
       <div>
         {content &&
-          content.map((c) => (
-            <SingleCard
-              key={c.Type}
-            //   id={c.id}
-            //   poster={c.poster_path}
-              title={c.title || c.name}
-              date={c.year || c.release_date}
-            //   media_type={c.Genre}
-            //   vote_average={c.Rated}
-            />
+          content.map((c) => ( <SingleCard key={c.id} title={c.name} poster={c.username}>
+              
+            
+            </SingleCard>
+            
           ))}
       </div>
     </div>

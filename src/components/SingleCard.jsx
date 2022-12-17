@@ -4,7 +4,11 @@ import ContentModal from "./ContentModal";
 
 const SingleCard = ({ id, poster, title, date, media_type, vote_average }) => {
   return (
-    <p>{title}</p>
+    <>
+      <p>{title}</p>
+      <p>{poster}</p>
+    </>
+
     // <ContentModal media_type={media_type} id={id}>
     //   <Badge
     //     badgeContent={vote_average}
