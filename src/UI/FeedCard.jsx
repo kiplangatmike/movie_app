@@ -2,7 +2,7 @@ import { Children } from "react";
 
 const FeedCard = (props) => {
     return (
-        <div className="fixed bg-gray-900 w-[20%] rounded ml-2 ">{props.children}</div>
+        <div className="bg-gray-900  rounded-2xl ml-2 shadow-2xl">{props.children}</div>
     )
 }
 

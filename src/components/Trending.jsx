@@ -6,19 +6,19 @@ const Trending = () => {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
 
-  const fetchTrending = async () => {
-    const { data } = await axios.get(
-      "http://www.omdbapi.com/?i=tt3896198&apikey=5b731350"
-    );
-    console.log(JSON.stringify(data));
-    setContent(data);
-    console.log(data);
-  };
+//   const fetchTrending = async () => {
+//     const { data } = await axios.get(
+//       "http://www.omdbapi.com/?i=tt3896198&apikey=5b731350"
+//     );
+//     console.log(JSON.stringify(data));
+//     setContent(data);
+//     console.log(data);
+//   };
 
-  useEffect(() => {
-    window.scroll(0, 0);
-    fetchTrending();
-  }, [page]);
+//   useEffect(() => {
+//     window.scroll(0, 0);
+//     fetchTrending();
+//   }, [page]);
 
  
 

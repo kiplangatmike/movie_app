@@ -7,8 +7,8 @@ import FeedCard from "../UI/FeedCard";
 const Feed = () => {
   return (
     <FeedCard>
-      <section className="m-4 ">
-        <div className="lg:px-8mx-auto items-center py-2 ">
+      <section className=" mb-2">
+        <div className=" items-center py-2 pl-4">
           <div className="gap-12 text-white pb-6">
             <h5>News Feed</h5>
           </div>
