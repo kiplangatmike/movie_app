@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import SingleCard from "./SingleCard";
+import TrendingCard from "../UI/TrendingCard";
 
 const Trending = () => {
   const [page, setPage] = useState(1);
@@ -31,8 +32,8 @@ const Trending = () => {
   
 
   return (
-    <div>
-      <span>Trending Today</span>
+    <TrendingCard>
+      <span className="p-12">Trending Today</span>
       
       
       <div>
@@ -44,7 +45,7 @@ const Trending = () => {
             
           ))}
       </div>
-    </div>
+    </TrendingCard>
   );
 };
 

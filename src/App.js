@@ -16,12 +16,13 @@ function App() {
       <div className="flex ">
         <div className="w-[20%]">
           <Feed />
-          {/* <Trending /> */}
+          
           <Following />
           <Logout />
         </div>
         <div className="w-[79%]">
           <Hero />
+          <Trending />
         </div>
       </div>
     </div>
