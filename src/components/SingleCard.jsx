@@ -5,7 +5,7 @@ import ContentModal from "./ContentModal";
 const SingleCard = ({ id, poster, title, date, media_type, vote_average }) => {
   return (
     <div className="flex flex-col">
-      <div className=" h-24 w-36 rounded-xl p-4 bg-gray-800 m-2 flex flex-wrap drop-shadow-md">
+      <div className=" h-24 w-36 rounded-xl p-4 bg-red-500 0 mt-3 mr-3 flex flex-wrap drop-shadow-md">
         <p>{title}</p>
         <p>{poster}</p>
       </div>

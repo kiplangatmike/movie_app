@@ -11,9 +11,9 @@ const Trending = () => {
       const { data } = await axios.get(
         "https://jsonplaceholder.typicode.com/users"
       );
-      console.log(JSON.stringify(data));
+    //   console.log(JSON.stringify(data));
       setContent(data);
-      console.log(data);
+    //   console.log(data);
     };
 
     useEffect(() => {
