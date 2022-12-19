@@ -8,6 +8,12 @@ module.exports = {
         witcher: "url('/public/assets/images/witcher.jpg')",
         witchery: "url('/public/assets/images/witchery.jpg')",
       },
+      colors: {
+        oil: "#050100",
+        dark_black: "#111111",
+        light_black: "#333333",
+
+      }
     },
   },
   plugins: [],

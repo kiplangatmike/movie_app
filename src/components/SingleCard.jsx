@@ -4,10 +4,12 @@ import ContentModal from "./ContentModal";
 
 const SingleCard = ({ id, poster, title, date, media_type, vote_average }) => {
   return (
-    <>
-      <p>{title}</p>
-      <p>{poster}</p>
-    </>
+    <div className="flex flex-col">
+      <div className=" h-24 w-36 rounded-xl p-4 bg-gray-800 m-2 flex flex-wrap drop-shadow-md">
+        <p>{title}</p>
+        <p>{poster}</p>
+      </div>
+    </div>
 
     // <ContentModal media_type={media_type} id={id}>
     //   <Badge

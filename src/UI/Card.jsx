@@ -2,7 +2,7 @@ import { Children } from "react";
 
 const Card = (props) => {
     return (
-        <div className="bg-gray-900 mx-2 rounded-2xl">{props.children}</div>
+        <div className="bg-dark_black mx-2 rounded-2xl drop-shadow-xl">{props.children}</div>
     )
 }
 

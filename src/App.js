@@ -11,9 +11,9 @@ import Trending from "./components/Trending";
 function App() {
   return (
     // <BrowserRouter className="bg-gray-700">
-    <div className="bg-gray-900">
+    <div className="bg-dark_black">
       <Navbar />
-      <div className="flex ">
+      <div className="flex">
         <div className="w-[20%]">
           <Feed />
           
