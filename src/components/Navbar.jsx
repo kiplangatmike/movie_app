@@ -7,7 +7,7 @@ import Card from "../UI/Card";
 const Navbar = () => {
   return (
     <Card>
-      <nav className="flex flex-row gap-12 items-center  m-4 mt-0 px-2 py-4">
+      <nav className="flex flex-row gap-12 items-center  m-4  px-2 py-4">
         <div className="text-gray-100 font-bold text-2xl">
           <a>movie.HUB</a>
         </div>

@@ -7,22 +7,24 @@ import Following from "./components/Following";
 import Logout from "./components/Logout";
 import Hero from "./components/Hero";
 import Trending from "./components/Trending";
+import Popular from "./components/Popular";
 
 function App() {
   return (
     // <BrowserRouter className="bg-gray-700">
-    <div className="bg-dark_black">
+    <div className="bg-dark_black ">
       <Navbar />
       <div className="flex">
-        <div className="w-[20%]">
+        <div className="w-[14%]">
           <Feed />
           
           <Following />
           <Logout />
         </div>
-        <div className="w-[79%]">
+        <div className="w-[85%]">
           <Hero />
           <Trending />
+          <Popular />
         </div>
       </div>
     </div>

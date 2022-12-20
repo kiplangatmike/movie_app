@@ -3,7 +3,7 @@ import axios from "axios";
 import SingleCard from "./SingleCard";
 import TrendingCard from "../UI/TrendingCard";
 
-const Trending = () => {
+const Popular = () => {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
 
@@ -31,7 +31,7 @@ const Trending = () => {
   return (
     <TrendingCard>
       <div>
-        <h3 className="pl-12 pt-4 font-bold text-white text-xl">Trending Today</h3>
+        <h3 className="pl-12 pt-4 font-bold text-white text-xl">What's Popular</h3>
 
         <div className="flex flex-wrap pl-12 ">
           {content &&
@@ -48,4 +48,4 @@ const Trending = () => {
   );
 };
 
-export default Trending;
+export default Popular;
