@@ -12,25 +12,25 @@ const Feed = () => {
           <div className="font-bold text-red-800 pb-3 pt-1 text-center">
             <h5>News Feed</h5>
           </div>
-          <div className="pl-4 text-red-500 font-bold flex flex-row gap-2 items-center pb-3">
+          <div className="cursor-pointer hover:text-red-500 pl-4 text-white font-bold flex flex-row gap-2 items-center pb-3">
             <i>
               <FaCompass />
             </i>
             <h4>Browse</h4>
           </div>
-          <div className="pl-4 text-white font-bold flex flex-row gap-2 items-center pb-3">
+          <div className="cursor-pointer hover:text-red-500 pl-4 text-white font-bold flex flex-row gap-2 items-center pb-3">
             <i>
               <GiEternalLove />
             </i>
             <h4>Watch list</h4>
           </div>
-          <div className="pl-4 text-white font-bold flex flex-row gap-2 items-center pb-3">
+          <div className="cursor-pointer hover:text-red-500 pl-4 text-white font-bold flex flex-row gap-2 items-center pb-3">
             <i>
               <BsCalendar3 />
             </i>
             <h4>Movies</h4>
           </div>
-          <div className="pl-4 text-white font-bold flex flex-row gap-2 items-center pb-3">
+          <div className="cursor-pointer hover:text-red-500 pl-4 text-white font-bold flex flex-row gap-2 items-center pb-3">
             <i>
               <BsCalendar3 />
             </i>
