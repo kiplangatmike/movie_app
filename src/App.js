@@ -8,6 +8,8 @@ import Logout from "./components/Logout";
 import Hero from "./components/Hero";
 import Trending from "./components/Trending";
 import Popular from "./components/Popular";
+import ImageSlider from "./ImageSlider";
+import images from "./Image";
 
 function App() {
   return (
@@ -16,15 +18,16 @@ function App() {
       <Navbar />
       <div className="flex">
         <div className="w-[14%]">
-          <Feed />
+          {/* <Feed />
           
           <Following />
-          <Logout />
+          <Logout /> */}
         </div>
         <div className="w-[85%]">
-          <Hero />
+          {/* <Hero />
           <Trending />
-          <Popular />
+          <Popular /> */}
+          <ImageSlider images={images}/>
         </div>
       </div>
     </div>
