@@ -11,6 +11,8 @@ const Logout = () => {
         <a>Log Out</a>
       </div>
     
+
+    
   );
 };
 
