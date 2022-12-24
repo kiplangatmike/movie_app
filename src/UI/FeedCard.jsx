@@ -6,4 +6,5 @@ const FeedCard = (props) => {
     )
 }
 
+
 export default FeedCard;

@@ -5,11 +5,13 @@ const images = [
     src: "src\one.png",
     alt: "Image 1",
   },
+  
   {
     id: 2,
     src: "./one.png",
     alt: "Image 2",
   },
+
   {
     id: 3,
     src: "./one.jpg",
