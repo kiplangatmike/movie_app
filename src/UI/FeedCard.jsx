@@ -1,4 +1,3 @@
-import { Children } from "react";
 
 const FeedCard = (props) => {
     return (

@@ -27,7 +27,7 @@ function App() {
           {/* <Hero />
           <Trending />
           <Popular /> */}
-          <ImageSlider images={images}/>
+          <ImageSlider images={images} />
         </div>
       </div>
     </div>
