@@ -8,8 +8,8 @@ import Logout from "./components/Logout";
 import Hero from "./components/Hero";
 import Trending from "./components/Trending";
 import Popular from "./components/Popular";
-import ImageSlider from "./ImageSlider";
-import images from "./Image";
+
+import LatestTrailer from "./components/LatestTrailer";
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
           <Hero />
           <Trending />
           <Popular />
-          <ImageSlider images={images} />
+          <LatestTrailer />
         </div>
       </div>
     </div>
