@@ -1,20 +1,20 @@
-import "./one.png";
+// import "./assets/images/one.png";
 const images = [
   {
     id: 1,
-    src: "src\one.png",
+    src: "B:\web development\react js\movie_app\src\assets\images\one.png",
     alt: "Image 1",
   },
-  
+
   {
     id: 2,
-    src: "./one.png",
+    src: "./assets/images/one.png",
     alt: "Image 2",
   },
 
   {
     id: 3,
-    src: "./one.jpg",
+    src: "./assets/images/one.png",
     alt: "Image 3",
   },
 ];

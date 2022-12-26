@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Style.css"
 import React from 'react'
+import images from "./Image";
   
 const ImageSlider = ({images}) => {
   
@@ -12,7 +13,7 @@ const ImageSlider = ({images}) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     lazyLoad: true,
-    autoplay: true,
+    // autoplay: true,
   autoplaySpeed: 2000,
    
   };

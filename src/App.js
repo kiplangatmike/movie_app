@@ -18,15 +18,15 @@ function App() {
       <Navbar />
       <div className="flex">
         <div className="w-[14%]">
-          {/* <Feed />
+          <Feed />
           
           <Following />
-          <Logout /> */}
+          <Logout />
         </div>
         <div className="w-[85%]">
-          {/* <Hero />
+          <Hero />
           <Trending />
-          <Popular /> */}
+          <Popular />
           <ImageSlider images={images} />
         </div>
       </div>
