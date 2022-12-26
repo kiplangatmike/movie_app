@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import SingleCard from "./SingleCard";
 import TrendingCard from "../UI/TrendingCard";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Popular = () => {
   const [page, setPage] = useState(1);
@@ -28,21 +31,32 @@ const Popular = () => {
   //     setContent(response.data);
   //   });
 
+  const settings = {
+    infinite: true,
+    dots: true,
+    slidesToShow: 6,
+    slidesToScroll: 2,
+    lazyLoad: true,
+    // autoplay: true,
+//   autoplaySpeed: 2000,
+   
+  };
+
   return (
     <TrendingCard>
       <div>
         <h3 className="pl-12 pt-4 font-bold text-white text-xl">What's Popular</h3>
 
-        <div className="flex flex-wrap pl-12 ">
+        <Slider {...settings} className="flex flex-wrap pl-12 ">
           {content &&
-            content.slice(0,6).map((c) => (
+            content.map((c) => (
               <SingleCard
                 key={c.id}
                 title={c.name}
                 poster={c.username}
               ></SingleCard>
             ))}
-        </div>
+        </Slider>
       </div>
     </TrendingCard>
   );
