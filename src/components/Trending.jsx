@@ -33,7 +33,7 @@ const Trending = () => {
 
   const settings = {
     infinite: true,
-    dots: true,
+    dots: false,
     slidesToShow: 6,
     slidesToScroll: 2,
     lazyLoad: true,
