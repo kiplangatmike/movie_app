@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { getTTFB } from "web-vitals";
 import LatestCard from "../UI/LatestCard";
-import SingleCard from "./SingleCard";
+import SingleCardTrailer from "./SingleCardTrailer";
 import axios from "axios";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const LatestTrailer = () => {
   const [content, setContent] = useState([]);
@@ -17,18 +20,29 @@ const LatestTrailer = () => {
     fetchData();
   }, []);
 
+  const settings = {
+    infinite: true,
+    dots: false,
+    slidesToShow: 6,
+    slidesToScroll: 2,
+    lazyLoad: true,
+    // autoplay: true,
+//   autoplaySpeed: 2000,
+   
+  };
+
   return (
     <LatestCard>
       <h3 className="pl-12 pt-4 font-bold text-white text-xl">
         Latest Trailers
       </h3>
-      <div className="flex flex-wrap pl-12 ">
+      <Slider {...settings} className="flex flex-wrap pl-12 ">
         {content && content.map((c) => (
-          <SingleCard key={c.id} title={c.title} poster={c.poster}>
+          <SingleCardTrailer key={c.id} title={c.title} poster={c.poster}>
             <h1>hello</h1>
-          </SingleCard>
+          </SingleCardTrailer>
         ))}
-      </div>
+      </Slider>
     </LatestCard>
   );
 };
