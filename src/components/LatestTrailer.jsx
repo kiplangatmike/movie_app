@@ -26,14 +26,12 @@ const LatestTrailer = () => {
     slidesToShow: 6,
     slidesToScroll: 2,
     lazyLoad: true,
-    // autoplay: true,
-//   autoplaySpeed: 2000,
    
   };
 
   return (
     <LatestCard>
-      <h3 className="pl-12 pt-4 font-bold text-white text-xl">
+      <h3 className="pl-12 pt-4 font-bold text-dark_blue text-xl">
         Latest Trailers
       </h3>
       <Slider {...settings} className="flex flex-wrap pl-12 ">
