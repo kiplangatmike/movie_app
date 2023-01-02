@@ -11,8 +11,8 @@ const Hero = () => {
   const settings = {
     infinite: true,
     dots: false,
-    slidesToShow: 6,
-    slidesToScroll: 2,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     lazyLoad: true,
     // autoplay: true,
     //   autoplaySpeed: 2000,
@@ -20,15 +20,16 @@ const Hero = () => {
 
   return (
     <section className="relative bg-witcher bg-center bg-cover ml-4 h-80  drop-shadow-md rounded-2xl">
-      
-        <Slider {...settings} className="flex flex-col pl-12 " >
+        <Slider {...settings} className="absolute ml-80 bottom-6 w-40 right-12">
           {Content.heroPhotos.map((content, i) => (
-            <SingleCardHero key={i} poster={content.pic} title={content.name}>
-              
-            </SingleCardHero>
+            <SingleCardHero
+              key={i}
+              poster={content.pic}
+              title={content.name}
+            ></SingleCardHero>
           ))}
         </Slider>
-      
+
 
       <h2 className="text-xl p-12">
         {heroPhotos.name}

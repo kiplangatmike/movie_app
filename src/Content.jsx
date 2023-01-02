@@ -11,5 +11,8 @@ export const Content = {
     { pic: avatar, name: "Avatar" },
     { pic: power, name: "Power" },
     { pic: wakanda, name: "Wakanda Forever" },
+    { pic: wakanda, name: "Wakanda Forever" },
+    { pic: wakanda, name: "Wakanda Forever" },
+    { pic: wakanda, name: "Wakanda Forever" },
   ],
 };
