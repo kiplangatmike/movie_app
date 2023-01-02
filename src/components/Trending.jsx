@@ -45,9 +45,9 @@ const Trending = () => {
   return (
     <TrendingCard>
       <div>
-        <h3 className="pl-12 pt-4 font-bold text-white text-xl">Trending Today</h3>
+        <h3 className="pl-6 pt-4 font-bold text-white text-xl">Trending Today</h3>
 
-        <Slider {...settings} className="flex flex-wrap pl-12 ">
+        <Slider {...settings} className="flex flex-wrap pl-6 ">
           {content &&
             content.slice(0,12).map((c) => (
               <SingleCard

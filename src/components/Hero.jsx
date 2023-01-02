@@ -20,7 +20,8 @@ const Hero = () => {
 
   return (
     <section className="relative bg-witcher bg-center bg-cover ml-4 h-80  drop-shadow-md rounded-2xl">
-        <Slider {...settings} className="absolute ml-80 bottom-6 w-40 right-12">
+      <div className="absolute bottom-20 right-8 h-12 w-40">
+        <Slider {...settings} >
           {Content.heroPhotos.map((content, i) => (
             <SingleCardHero
               key={i}
@@ -29,9 +30,9 @@ const Hero = () => {
             ></SingleCardHero>
           ))}
         </Slider>
+      </div>
 
-
-      <h2 className="text-xl p-12">
+      {/* <h2 className="text-xl p-12">
         {heroPhotos.name}
         <span className="font-bold ">
           <br />
@@ -43,7 +44,7 @@ const Hero = () => {
         src={heroPhotos.pic}
         alt="logo"
         className=" absolute ml-80 bottom-6 right-12 w-16 h-10"
-      />
+      /> */}
     </section>
   );
 };

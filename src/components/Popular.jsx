@@ -45,9 +45,9 @@ const Popular = () => {
   return (
     <TrendingCard>
       <div>
-        <h3 className="pl-12 pt-4 font-bold text-white text-xl">What's Popular</h3>
+        <h3 className="pl-6 pt-4 font-bold text-white text-xl">What's Popular</h3>
 
-        <Slider {...settings} className="flex flex-wrap pl-12 ">
+        <Slider {...settings} className="flex flex-wrap pl-6 ">
           {content &&
             content.map((c) => (
               <SingleCard
