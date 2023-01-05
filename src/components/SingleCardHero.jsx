@@ -12,7 +12,7 @@ const SingleCardHero = ({
 }) => {
   return (
     <div
-      className="rounded-xl p-4 bg-yellow-900 right-12   h-32  mr-4 flex flex-wrap drop-shadow-md"
+      className="rounded-xl p-4 bg-y right-12   h-32  mr-4 flex flex-wrap drop-shadow-md"
       key={id}
     >
       <p>{title}</p>

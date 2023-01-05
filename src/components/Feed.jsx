@@ -9,7 +9,7 @@ const Feed = () => {
     <FeedCard>
       <section className=" mb-2">
         <div className=" items-center py-2">
-          <div className="font-bold text-red-800 pb-3 pt-1 text-center">
+          <div className="font-bold text-red-600 pb-3 pt-1 text-center">
             <h5>News Feed</h5>
           </div>
           <div className="cursor-pointer hover:text-red-500 pl-4 text-white font-bold flex flex-row gap-2 items-center pb-3">
@@ -22,19 +22,19 @@ const Feed = () => {
             <i>
               <GiEternalLove />
             </i>
-            <h4>Watch list</h4>
+            <h4>Trending</h4>
           </div>
           <div className="cursor-pointer hover:text-red-500 pl-4 text-white font-bold flex flex-row gap-2 items-center pb-3">
             <i>
               <BsCalendar3 />
             </i>
-            <h4>Movies</h4>
+            <h4>Popular</h4>
           </div>
           <div className="cursor-pointer hover:text-red-500 pl-4 text-white font-bold flex flex-row gap-2 items-center pb-3">
             <i>
               <BsCalendar3 />
             </i>
-            <h4>Series</h4>
+            <h4>Trailers</h4>
           </div>
         </div>
       </section>

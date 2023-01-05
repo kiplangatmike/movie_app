@@ -7,10 +7,8 @@ import Card from "../UI/Card";
 const Navbar = () => {
   return (
     <Card>
-      <nav className="flex flex-row gap-12 items-center  m-4  px-2 py-4">
-        <div className="text-gray-100 font-bold text-2xl">
-          <a>movie.HUB</a>
-        </div>
+      <nav className="flex flex-row gap-12 items-center fixed-top  px-2 top-0 left-0">
+        
         <div className="flex flex-row text-gray-100 gap-2">
           <IoIosArrowBack />
           <IoIosArrowForward />

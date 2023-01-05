@@ -19,7 +19,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative bg-witcher bg-center bg-cover ml-4 h-80  drop-shadow-md rounded-2xl">
+    <section className="relative bg-witcher bg-center bg-cover mx-4 h-80  drop-shadow-md rounded-2xl">
       <div className="absolute bottom-20 right-8 h-12 w-40">
         <Slider {...settings} >
           {Content.heroPhotos.map((content, i) => (

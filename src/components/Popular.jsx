@@ -12,11 +12,11 @@ const Popular = () => {
 
     const fetchTrending = async () => {
       const { data } = await axios.get(
-        "https://jsonplaceholder.typicode.com/users"
+        "https://api.themoviedb.org/3/movie/550?api_key=a02cb89a765a86c8bf96b049622889fd"
       );
     //   console.log(JSON.stringify(data));
       setContent(data);
-    //   console.log(data);
+      console.log(data);
     };
 
     useEffect(() => {
@@ -33,10 +33,11 @@ const Popular = () => {
 
   const settings = {
     infinite: true,
-    dots: false,
+    dots: true,
     slidesToShow: 6,
     slidesToScroll: 2,
     lazyLoad: true,
+    arrows: false,
     // autoplay: true,
 //   autoplaySpeed: 2000,
    
@@ -53,7 +54,7 @@ const Popular = () => {
               <SingleCard
                 key={c.id}
                 title={c.name}
-                poster={c.username}
+                poster={c.name}
               ></SingleCard>
             ))}
         </Slider>

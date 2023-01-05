@@ -8,6 +8,7 @@ import Logout from "./components/Logout";
 import Hero from "./components/Hero";
 import Trending from "./components/Trending";
 import Popular from "./components/Popular";
+import Title from "./components/Title";
 
 import LatestTrailer from "./components/LatestTrailer";
 
@@ -15,15 +16,15 @@ function App() {
   return (
     // <BrowserRouter className="bg-gray-700">
     <div className="bg-dark_black ">
-      <Navbar />
-      <div className="flex">
-        <div className="w-[14%]">
+      <div className="flex relative">
+        <div className="w-[14%] fixed">
+          <Title />
           <Feed />
-          
           <Following />
           <Logout />
         </div>
-        <div className="w-[85%]">
+        <div className="w-[85%] ml-[15%] relative">
+          <Navbar />
           <Hero />
           <Trending />
           <Popular />

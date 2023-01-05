@@ -5,6 +5,7 @@ import TrendingCard from "../UI/TrendingCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { GiWhiteBook } from "react-icons/gi";
 
 const Trending = () => {
   const [page, setPage] = useState(1);
@@ -33,10 +34,12 @@ const Trending = () => {
 
   const settings = {
     infinite: true,
-    dots: false,
+    dots: true,
     slidesToShow: 6,
     slidesToScroll: 2,
     lazyLoad: true,
+    arrows: false,
+    // fade: true,
     // autoplay: true,
 //   autoplaySpeed: 2000,
    
