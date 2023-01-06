@@ -15,7 +15,7 @@ const Popular = () => {
         "https://api.themoviedb.org/3/movie/550?api_key=a02cb89a765a86c8bf96b049622889fd"
       );
     //   console.log(JSON.stringify(data));
-      setContent(data);
+      setContent(data.genre);
       console.log(data);
     };
 
@@ -54,7 +54,7 @@ const Popular = () => {
               <SingleCard
                 key={c.id}
                 title={c.name}
-                poster={c.name}
+                // poster={c.name}
               ></SingleCard>
             ))}
         </Slider>
