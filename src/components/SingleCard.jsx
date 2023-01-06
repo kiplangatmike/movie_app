@@ -2,12 +2,13 @@ import { Badge } from "@mui/material";
 import { unavailable, img_300 } from "../config/Config";
 import ContentModal from "./ContentModal";
 
-const SingleCard = ({ id, poster, title, date, media_type, vote_average }) => {
+const SingleCard = ({ id, poster, title, img, date, media_type, vote_average }) => {
   return (
     <div className="flex flex-col pb-2">
       <div className=" h-24 w-40  rounded-xl p-4 bg-yellow-900 0 mt-3 mr-4 flex flex-wrap drop-shadow-md">
         <p>{title}</p>
         <p>{poster}</p>
+        <img src={img} alt="" />
       </div>
     </div>
 

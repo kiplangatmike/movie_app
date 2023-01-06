@@ -1,5 +1,5 @@
 import axios from "axios";
-import API_KEY from '.env';
+// import 'dotenv/config';
 
 export const BASE_API = axios.create({
   baseURL: "https://api.themoviedb.org/3/",
@@ -7,42 +7,42 @@ export const BASE_API = axios.create({
 const BASE_AXIOS = axios.create({
   baseURL: "https://api.themoviedb.org/3%22%7D",
 });
-export const API_KEY = API_KEY;
+export const API_key = process.env.REACT_APP_API_KEY;
 export const Popular_URL =
-  `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+  `https://api.themoviedb.org/3/movie/popular?api_key=${API_key}&language=en-US&page=1`;
 
 export const Discover_URL =
-  `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`;
+  `https://api.themoviedb.org/3/discover/movie?api_key=${API_key}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`;
 
 export const img_url = "http://image.tmdb.org/t/p/w500";
 export const fetchSingleMovie = (movieId) =>
   BASE_AXIOS.get(
-    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}`
+    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_key}`
   );
 export const fetchSingleMovieCredits = (movieId) =>
   BASE_AXIOS.get(
-    `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}`
+    `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_key}`
   );
 export const fetchReviews = (movieId) =>
   BASE_AXIOS.get(
-    `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${API_KEY}`
+    `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${API_key}`
   );
 export const fetchRecommendations = (movieId) =>
-  BASE_AXIOS.get(`/movie/${movieId}/similar?api_key=${API_KEY}`);
+  BASE_AXIOS.get(`/movie/${movieId}/similar?api_key=${API_key}`);
 
 export const fetchPopularMovies = (page) =>
-  BASE_AXIOS.get(`/movie/popular?api_key=${API_KEY}&page=${page}`);
+  BASE_AXIOS.get(`/movie/popular?api_key=${API_key}&page=${page}`);
 export const fetchTopRatedMovies = (page) =>
-  BASE_API.get(`/movie/top_rated?api_key=${API_KEY}&page=${page}`);
+  BASE_API.get(`/movie/top_rated?api_key=${API_key}&page=${page}`);
 
 export const fetchGenres = () =>
-  BASE_AXIOS.get(`/genre/movie/list?api_key=${API_KEY}`);
+  BASE_AXIOS.get(`/genre/movie/list?api_key=${API_key}`);
 
 export const fetchPopularMovie = () =>
-  BASE_API.get(`movie/popular?api_key=${API_KEY}`);
+  BASE_API.get(`movie/popular?api_key=${API_key}`);
 
 export const fetchTopRatedMovie = () =>
-  BASE_API.get(`movie/top_rated?api_key=${API_KEY}`);
+  BASE_API.get(`movie/top_rated?api_key=${API_key}`);
 
 export const fetchSort = (
   sort_date_to,
@@ -51,7 +51,7 @@ export const fetchSort = (
   sort_choose
 ) =>
   BASE_API.get(
-    `movie/popular?api_key=${API_KEY}&release_date.lte=${sort_date_to}&release_date.gte=${sort_date_from}&with_genres=${sort_genre}&sort_by=${sort_choose}`
+    `movie/popular?api_key=${API_key}&release_date.lte=${sort_date_to}&release_date.gte=${sort_date_from}&with_genres=${sort_genre}&sort_by=${sort_choose}`
   );
 
 // export const fetchSortFilter = (
@@ -71,12 +71,12 @@ export const fetchSortFilterDiscover = (
   sort_choose
 ) =>
   BASE_API.get(
-    `discover/movie?api_key=${API_KEY}&original_language=en-US&primary_release_date.gte=${sort_date_to}&primary_release_date.lte=${sort_date_from}&with_genres=${sort_genre}&sort_by=${sort_choose}`
+    `discover/movie?api_key=${API_key}&original_language=en-US&primary_release_date.gte=${sort_date_to}&primary_release_date.lte=${sort_date_from}&with_genres=${sort_genre}&sort_by=${sort_choose}`
   );
 
 export const fetchSortFilter = (page, sortValue, startDate, endDate, genre) =>
   BASE_AXIOS.get(
-    `/discover/movie?api_key=${API_KEY}&page=${page}&sort_by=${sortValue}&release_date.lte=${startDate}&release_date.gte=${endDate}&with_genres=${genre}`
+    `/discover/movie?api_key=${API_key}&page=${page}&sort_by=${sortValue}&release_date.lte=${startDate}&release_date.gte=${endDate}&with_genres=${genre}`
   );
 export const fetchTopRatedPopular = (category, page) =>
-  BASE_AXIOS.get(`/movie/${category}?api_key=${API_KEY}&page=${page}`);
+  BASE_AXIOS.get(`/movie/${category}?api_key=${API_key}&page=${page}`);

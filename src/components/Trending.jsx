@@ -6,31 +6,28 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GiWhiteBook } from "react-icons/gi";
+import { img_url } from "../api/Index";
+
+const API_key = process.env.REACT_APP_API_KEY;
 
 const Trending = () => {
+  const [timeData, setTimeData] = useState("day");
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
 
-    const fetchTrending = async () => {
-      const { data } = await axios.get(
-        "https://jsonplaceholder.typicode.com/users"
-      );
-    //   console.log(JSON.stringify(data));
-      setContent(data);
-    //   console.log(data);
-    };
+  const fetchTrending = `https://api.themoviedb.org/3/trending/movie/${timeData}?api_key=14ccdb96456935bbb41591e99697d262`;
 
-    useEffect(() => {
-      window.scroll(0, 0);
-      fetchTrending();
-    }, [page]);
+  useEffect(() => {
+    fetch(fetchTrending)
+      .then((response) => response.json())
+      .then((json) => {
+        setContent(json);
+      });
+    window.scroll(0, 0);
+    
+  }, [timeData]);
 
-  // axios
-  //   .get("http://www.omdbapi.com/?i=tt3896198&apikey=5b731350")
-  //   .then(function (response) {
-  //     console.log(response.data);
-  //     setContent(response.data);
-  //   });
+  console.log(content);
 
   const settings = {
     infinite: true,
@@ -41,24 +38,25 @@ const Trending = () => {
     arrows: false,
     // fade: true,
     // autoplay: true,
-//   autoplaySpeed: 2000,
-   
+    //   autoplaySpeed: 2000,
   };
 
   return (
     <TrendingCard>
       <div>
-        <h3 className="pl-6 pt-4 font-bold text-white text-xl">Trending Today</h3>
+        <h3 className="pl-6 pt-4 font-bold text-white text-xl">
+          Trending Today
+        </h3>
 
         <Slider {...settings} className="flex flex-wrap pl-6 ">
-          {content &&
-            content.slice(0,12).map((c) => (
-              <SingleCard
-                key={c.id}
-                title={c.name}
-                poster={c.username}
-              ></SingleCard>
-            ))}
+          {content?.results?.map((item, index) => (
+                <SingleCard
+                  key={index}
+                  img={`${img_url}${item.poster_path}`}
+                  title={item.title}
+                  poster={item.release_date}
+                ></SingleCard>
+              ))}
         </Slider>
       </div>
     </TrendingCard>
