@@ -15,9 +15,9 @@ import LatestTrailer from "./components/LatestTrailer";
 function App() {
   return (
     // <BrowserRouter className="bg-gray-700">
-    <div className="bg-dark_black ">
+    <div className="bg-[#181818] ">
       <div className="flex relative">
-        <div className="w-[14%] fixed">
+        <div className="w-[14%] fixed sidebar max-w-[300px] min-w-[200px] h-full z-50">
           <Title />
           <Feed />
           <Following />
