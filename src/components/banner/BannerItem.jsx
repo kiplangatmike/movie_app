@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import useSWR from "swr";
 import { API, fetcher} from "../../Config";
 import Loading from "../Loading";
-
+import  { updateFavorite } from "../../utils/updateFavorite";
 
 
 
