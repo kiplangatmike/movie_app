@@ -1,10 +1,21 @@
 import Button  from "../Button";
 import { useNavigate } from "react-router-dom";
-import { useSWR } from "swr";
+import useSWR from "swr";
 import { API, fetcher} from "../../Config";
+import Loading from "../Loading";
+
+
 
 
 const BannerItem = ({ item, mediaType }) => {
+    const isFavorite = useFavorite(item?.id);
+    const {userInfo} = useAuth();
+    const { poster_path, title, id } = item;
+    const { data, error } = useSWR(API.getMovieDetail(id), fetcher);
+    if (error) return <div>failed to load</div>
+    if (!data) return <Loading></Loading>
+    const { genre } = data;
+
     return (
         <div>
             <div>
