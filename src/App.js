@@ -9,6 +9,7 @@ import Hero from "./components/Hero";
 import Trending from "./components/Trending";
 import Popular from "./components/Popular";
 import Title from "./components/Title";
+import Banner from "./components/banner/Banner";
 
 import LatestTrailer from "./components/LatestTrailer";
 
@@ -25,6 +26,7 @@ function App() {
         </div>
         <div className="w-[85%] ml-[15%] relative">
           <Navbar />
+          <Banner />
           <Hero />
           <Trending />
           <Popular />

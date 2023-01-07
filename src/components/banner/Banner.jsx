@@ -1,8 +1,8 @@
 import React from "react";
 import useSWR from "swr";
 import { SwiperSlide, Swiper } from "swiper/react";
-import SwiperCore, { autoplay } from "swiper";
-import { API, fetcher } from "../../config";
+import SwiperCore, { Autoplay } from "swiper";
+import { API, fetcher } from "../../Config";
 import BannerItem from "./BannerItem";
 
 const Banner = () => {
