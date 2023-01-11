@@ -20,18 +20,23 @@ const updateFavorite = async (e, idMovie, mediaType, user) => {
       console.log("Success");
     });
   } else {
-    toast.error("ypu have to sign in first!");
+    toast.error("You have to sign in first!");
   }
 };
 
-const add = ({ id, mediaType }) => {
-  const { userInfo } = useAuth();
+const Add = ({ id, mediaType }) => {
+  const {userInfo} = useAuth()
   return (
-    <span onClick={(e) => updateFavorite(e, id, mediaType, userInfo)}>
+    <span
+      className="absolute flex items-center justify-center w-8 h-8 leading-none duration-200 rounded-full cursor-pointer hover:gap-3 top-3 right-3 bg-white/30 backdrop-blur-sm group hover:bg-primary hover:w-auto hover:px-3"
+      onClick={(e) => updateFavorite(e, id, mediaType, userInfo)}
+    >
       <AiOutlinePlus></AiOutlinePlus>
-      <span>Add to favourite</span>
+      <span className="hidden text-transparent group-hover:block group-hover:text-white">
+        Add to favorite
+      </span>
     </span>
   );
 };
 
-export {add, updateFavorite};
+export {Add, updateFavorite};

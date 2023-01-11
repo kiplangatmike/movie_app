@@ -5,6 +5,10 @@ import { API, fetcher} from "../../Config";
 import Loading from "../Loading";
 import  { updateFavorite } from "../../utils/updateFavorite";
 
+import { useAuth } from "../../context/auth-context";
+import { useFavorite } from "../../hooks/useFavorite";
+import Heart from "../../utils/removeFavorite";
+
 
 
 const BannerItem = ({ item, mediaType }) => {
@@ -35,7 +39,7 @@ const BannerItem = ({ item, mediaType }) => {
                         <Button>
                             Watch Now
                         </Button>
-                        {isFavourite ? (
+                        {isFavorite ? (
                             <div>
                                 <Heart id={id} mediaType={mediaType}></Heart>
                             </div>

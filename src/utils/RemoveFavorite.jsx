@@ -1,17 +1,18 @@
-import { doc, updateDoc } from "firebase/firestone";
+import {
+  doc,
+  updateDoc,
+} from "firebase/firestore";
 import { AiFillHeart } from "react-icons/ai";
 import { useAuth } from "../context/auth-context";
 import { db } from "../firebase/firebase.config";
 
-const removefavorite = async (e, idMovie, mediaType, user) => {
+const removeFavorite = async (e, idMovie, mediaType, user) => {
   if (user) {
     e.preventDefault();
-    const newListFavorite = user.ListFavorite.filter(
-      (item) => item.id !== idMovie
-    );
+    const newListFavorite = user.listFavorite.filter(item => item.id !== idMovie)
     const updateData = doc(db, "users", user?.id);
     await updateDoc(updateData, {
-      listFavourite: [...newListFavorite],
+      listFavorite: [...newListFavorite],
     }).then(() => {
       console.log("Success");
     });
@@ -20,16 +21,15 @@ const removefavorite = async (e, idMovie, mediaType, user) => {
   }
 };
 
-const Heart = ({ id, mediaType, className = "" }) => {
-  const { userInfo } = useAuth();
+const Heart = ({id, mediaType, className=''}) => {
+  const {userInfo} = useAuth()
   return (
     <span
       onClick={(e) => removeFavorite(e, id, mediaType, userInfo)}
       className={`cursor-pointer ${className}`}
     >
-        <AiFillHeart></AiFillHeart>
+      <AiFillHeart></AiFillHeart>
     </span>
   );
 };
-
 export default Heart;

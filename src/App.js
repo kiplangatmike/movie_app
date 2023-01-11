@@ -12,28 +12,64 @@ import Title from "./components/Title";
 import Banner from "./components/banner/Banner";
 
 import LatestTrailer from "./components/LatestTrailer";
+import { AuthProvider } from "./context/auth-context";
 
 function App() {
   return (
-    // <BrowserRouter className="bg-gray-700">
     <div className="bg-[#181818] ">
-      <div className="flex relative">
-        <div className="w-[14%] fixed sidebar max-w-[300px] min-w-[200px] h-full z-50">
+        <div className="flex relative">
+          <div className="w-[14%] fixed sidebar max-w-[300px] min-w-[200px] h-full z-50">
           <Title />
           <Feed />
           <Following />
           <Logout />
-        </div>
-        <div className="w-[85%] ml-[15%] relative">
-          <Navbar />
-          <Banner />
-          <Hero />
-          <Trending />
-          <Popular />
-          <LatestTrailer />
+          </div>
+          <div className="w-[85%] ml-[15%] relative">
+        
+              <Navbar />
+              <Banner />
+              <Hero />
+              <Trending />
+              <Popular />
+              <LatestTrailer />
+          </div>
         </div>
       </div>
-    </div>
+
+
+    // <AuthProvider>
+    //   <div className="bg-[#181818] ">
+    //     <div className="flex relative">
+    //       <div className="w-[14%] fixed sidebar max-w-[300px] min-w-[200px] h-full z-50">
+    //         <Routes>
+    //         <Route exact path="/movie" element={<Title></Title>}></Route>
+    //           <Title />
+    //           <Feed />
+    //           <Following />
+    //           <Logout />
+    //         </Routes>
+    //       </div>
+    //       <div className="w-[85%] ml-[15%] relative">
+    //         <Routes>
+    //           <Navbar />
+    //           <Banner />
+    //           <Hero />
+    //           <Trending />
+    //           <Popular />
+    //           <LatestTrailer />
+    //         </Routes>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </AuthProvider>
+
+
+
+
+
+
+
+    // <BrowserRouter className="bg-gray-700">
 
     //     {<Routes>
 

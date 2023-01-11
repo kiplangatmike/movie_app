@@ -5,7 +5,7 @@ import { auth, db } from "../firebase/firebase.config";
 const AuthContext = createContext();
 function AuthProvider(props) {
   const [userInfo, setUserInfo] = useState({});
-  const value = { userInfo, setuserInfo };
+  const value = { userInfo, setUserInfo };
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -17,23 +17,22 @@ function AuthProvider(props) {
           snapshot.forEach((doc) => {
             setUserInfo({
               ...user,
-              id: doc.idc,
+              id: doc.id,
               ...doc.data(),
             });
           });
         });
       } else {
-        setUserInfo(null)
+        setUserInfo(null);
       }
     });
   }, []);
-  return <AuthContext.Provider value={value} {...props}></AuthContext.Provider>
+  return <AuthContext.Provider value={value} {...props}></AuthContext.Provider>;
 }
 function useAuth() {
-    const context = React.useContext(AuthContext);
-    if (!context)
+  const context = React.useContext(AuthContext);
+  if (!context)
     throw new Error("useAuth must be used within AuthProvider");
-    return context;
+  return context;
 }
-
-export { AuthProvider, useAuth};
+export { AuthProvider, useAuth };
