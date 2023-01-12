@@ -15,11 +15,13 @@ const Banner = () => {
         grabCursor="true"
         slidesPerView={1}
         autoplay={{ delay: 8000 }}
-      >{movies.length > 0 && movies.slice(0, 10).map((item) => (
+      >
+        {movies.length > 0 && movies.slice(0, 10).map((item) => (
         <SwiperSlide key={item.id}>
             <BannerItem item={item} mediaType="movie"></BannerItem>
         </SwiperSlide>
-      ))}</Swiper>
+      ))}
+      </Swiper>
     </section>
   );
 };
