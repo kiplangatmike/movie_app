@@ -3,14 +3,14 @@ import { useLocation } from "react-router-dom";
 
 const Loading = (props) => {
   const [loading, setLoading] = useState(false);
-  const location = useLocation();
+  // const location = useLocation();
 
   useLayoutEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
     }, 1000);
-  }, [location]);
+  }, []);
   if (!props.children) {
     return (
       <>

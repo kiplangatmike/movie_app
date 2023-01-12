@@ -1,8 +1,8 @@
 import React from "react";
+import { API, fetcher } from "../../Config";
 import useSWR from "swr";
 import { SwiperSlide, Swiper } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
-import { API, fetcher } from "../../Config";
 import BannerItem from "./BannerItem";
 
 const Banner = () => {
@@ -10,17 +10,20 @@ const Banner = () => {
   const { data } = useSWR(API.getMovieList("popular", 1, "movie"), fetcher);
   const movies = data?.results || [];
   return (
-    <section className="banner h-[500px] page-container mb-20 overflow-hidden">
+    <section className="banner h-[500px] page-container mb-20 overflow-hidden flex-col">
       <Swiper
         grabCursor="true"
         slidesPerView={1}
-        autoplay={{ delay: 8000 }}
+        autoplay={{
+          delay: 8000,
+        }}
       >
-        {movies.length > 0 && movies.slice(0, 10).map((item) => (
-        <SwiperSlide key={item.id}>
-            <BannerItem item={item} mediaType="movie"></BannerItem>
-        </SwiperSlide>
-      ))}
+        {movies.length > 0 &&
+          movies.slice(0, 10).map((item) => (
+            <SwiperSlide key={item.id}>
+              <BannerItem item={item} mediaType="movie"></BannerItem>
+            </SwiperSlide>
+          ))}
       </Swiper>
     </section>
   );

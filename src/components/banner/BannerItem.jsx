@@ -2,7 +2,7 @@
 import useSWR from "swr";
 import { API, fetcher } from "../../Config";
 // import Button from "../Button";
-// import Loading from "../Loading";
+import Loading from "../Loading";
 // import { updateFavorite } from "../../utils/updateFavorite";
 // import { useAuth } from "../../context/auth-context";
 // import { useFavorite } from "../../hooks/useFavorite";
@@ -15,7 +15,7 @@ export default function BannerItem({ item, mediaType }) {
   const { poster_path, title, id } = item;
   const { data, error } = useSWR(API.getMovieDetail(id), fetcher);
   if (error) return <div>failed to load</div>;
-//   if (!data) return <Loading></Loading>;
+  if (!data) return <Loading></Loading>;
   const { genres } = data;
   return (
     <div className="relative w-full h-full overflow-hidden rounded-lg">

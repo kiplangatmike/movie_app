@@ -44,7 +44,7 @@ const Navbar = () => {
           <IoIosArrowForward />
         </div>
         <div className="">
-          <form on onSubmit={searchMovies}>
+          <form onSubmit={searchMovies}>
             <input
               type="text"
               onChange={(e) => setSearchMovies(e.target.results)}
