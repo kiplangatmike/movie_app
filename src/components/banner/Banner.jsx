@@ -6,11 +6,11 @@ import SwiperCore, { Autoplay } from "swiper";
 import BannerItem from "./BannerItem";
 
 const Banner = () => {
-  SwiperCore.use([Autoplay]);
+  SwiperCore.use([]);
   const { data } = useSWR(API.getMovieList("popular", 1, "movie"), fetcher);
   const movies = data?.results || [];
   return (
-    <section className="banner h-[500px] page-container mb-20 overflow-hidden flex-col">
+    <section className="banner h-[50 page-container mb-20 overflow-hidden ">
       <Swiper
         grabCursor="true"
         slidesPerView={1}

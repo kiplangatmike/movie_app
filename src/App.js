@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="bg-[#181818] ">
         <div className="flex relative">
-          <div className="w-[14%] fixed sidebar max-w-[300px] min-w-[200px] h-full z-50">
+          <div className="w-[14%] fixed sidebar max-w-[300px] min-w-[130px] h-full z-50">
           <Title />
           <Feed />
           <Following />

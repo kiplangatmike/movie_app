@@ -17,8 +17,9 @@ export default function BannerItem({ item, mediaType }) {
   if (error) return <div>failed to load</div>;
   if (!data) return <Loading></Loading>;
   const { genres } = data;
+  console.log(data);
   return (
-    <div className="relative w-full h-full overflow-hidden rounded-lg">
+    <div className="relative w-full h-full overflow-hidden rounded-lg ">
       <div className="overlay absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.6)] to-[rgba(0,0,0,0.6)] rounded-lg "></div>
       <img
         className="object-contain w-full h-full rounded-lg"
