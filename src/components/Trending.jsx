@@ -24,7 +24,6 @@ const Trending = () => {
         setContent(json);
       });
     window.scroll(0, 0);
-    
   }, [timeData]);
 
   console.log(content);
@@ -42,24 +41,26 @@ const Trending = () => {
   };
 
   return (
-    <TrendingCard>
-      <div>
+    // <TrendingCard>
+    <div className="bg-black  my-5 mx-4 pb-2 rounded-2xl">
+      <TrendingCard>
         <h3 className="pl-6 pt-4 font-bold text-white text-xl">
           Trending Today
         </h3>
+      </TrendingCard>
 
-        <Slider {...settings} className="flex flex-wrap pl-6 ">
-          {content?.results?.map((item, index) => (
-                <SingleCard
-                  key={index}
-                  img={`${img_url}${item.poster_path}`}
-                  title={item.title}
-                  poster={item.release_date}
-                ></SingleCard>
-              ))}
-        </Slider>
-      </div>
-    </TrendingCard>
+      <Slider {...settings} className="flex flex-wrap pl-6 ">
+        {content?.results?.map((item, index) => (
+          <SingleCard
+            key={index}
+            img={`${img_url}${item.poster_path}`}
+            title={item.title}
+            poster={item.release_date}
+          ></SingleCard>
+        ))}
+      </Slider>
+    </div>
+    // </TrendingCard>
   );
 };
 

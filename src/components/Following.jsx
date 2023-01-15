@@ -22,11 +22,11 @@ const Following = () => {
 
   return (
     <FollowingCard>
-      <div className="text-white p-4">
-        <div className="pb-4 text-center font-bold text-red-600">
+      <div className="text-white p-5">
+        <div className="pb-5 text-center font-bold text-red-600">
           <h5>following</h5>
         </div>
-        <div className="">{user.slice(0, 5).map((u) => (<p className="py-1.5" key={u.id}>{u.name}</p>))}</div>
+        <div className="">{user.slice(0, 4).map((u) => (<p className="py-1.5" key={u.id}>{u.name}</p>))}</div>
       </div>
     </FollowingCard>
   );

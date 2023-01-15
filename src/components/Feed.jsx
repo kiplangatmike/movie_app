@@ -12,7 +12,7 @@ const Feed = () => {
           <div className="font-bold text-red-600 pb-3 pt-1 text-center">
             <h5>News Feed</h5>
           </div>
-          {/* <div className="cursor-pointer hover:bg-red-500 rounded-xl pl-4 text-white font-bold flex flex-row gap-2 items-center py-2">
+          <div className="cursor-pointer hover:bg-red-500 rounded-xl pl-4 text-white font-bold flex flex-row gap-2 items-center py-2">
             <i>
               <FaCompass />
             </i>
@@ -23,7 +23,7 @@ const Feed = () => {
               <GiEternalLove />
             </i>
             <h4>Trending</h4>
-          </div> */}
+          </div>
           <div className="cursor-pointer hover:bg-red-500 rounded-xl pl-4 text-white font-bold flex flex-row gap-2 items-center py-2">
             <i>
               <BsCalendar3 />

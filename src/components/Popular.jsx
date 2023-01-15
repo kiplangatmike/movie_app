@@ -5,6 +5,7 @@ import TrendingCard from "../UI/TrendingCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { SwiperSlide, Swiper } from "swiper/react";
 import { img_url } from "../api/Index";
 
 const Popular = () => {
@@ -12,7 +13,7 @@ const Popular = () => {
   const [content, setContent] = useState([]);
 
   const fetchPopular = `
-  https://api.themoviedb.org/3/movie/550/videos?v=6JnN1DmbqoU&api_key=a02cb89a765a86c8bf96b049622889fd&language=en-US`;
+  https://api.themoviedb.org/3/discover/movie?api_key=a02cb89a765a86c8bf96b049622889fd&language=en-US`;
 
   //   console.log(JSON.stringify(data));
   // setContent(data.genre);
@@ -31,33 +32,67 @@ const Popular = () => {
   const settings = {
     infinite: true,
     dots: true,
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesToScroll: 2,
     lazyLoad: true,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 1080,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 950,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 620,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
     // autoplay: true,
     //   autoplaySpeed: 2000,
   };
 
   return (
-    <TrendingCard>
-      <div>
+    // <TrendingCard>
+    <div className="bg-black  my-5 mx-4 pb- rounded-2xl">
+      <TrendingCard>
         <h3 className="pl-6 pt-4 font-bold text-white text-xl">
           What's Popular
         </h3>
+      </TrendingCard>
 
-        <Slider {...settings} className="flex flex-wrap pl-6 ">
-          {content?.results?.map((item, index) => (
-              <SingleCard
-                key={index}
-                img={`${img_url}${item.poster_path}`}
-                title={item.title}
-                poster={item.release_date}
-              ></SingleCard>
-            ))}
-        </Slider>
-      </div>
-    </TrendingCard>
+      <Slider {...settings} className="flex flex-wrap pl-6 ">
+        {content?.results?.map((item, index) => (
+          <SingleCard
+            key={index}
+            img={`${img_url}${item.poster_path}`}
+            title={item.title}
+            poster={item.release_date}
+          ></SingleCard>
+        ))}
+      </Slider>
+    </div>
+    // </TrendingCard>
   );
 };
 

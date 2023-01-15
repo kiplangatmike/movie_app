@@ -27,7 +27,7 @@ function App() {
           <div className="w-[85%] ml-[15%] relative">
         
               <Navbar />
-              <Banner />
+              {/* <Banner /> */}
               <Hero />
               <Trending />
               <Popular />
