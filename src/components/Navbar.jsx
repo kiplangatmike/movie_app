@@ -47,11 +47,12 @@ const Navbar = () => {
           <form onSubmit={searchMovies}>
             <input
               type="text"
+              value={searchKey}
               onChange={(e) => setSearchMovies(e.target.results)}
               placeholder="Search everything"
-              className="rounded-2xl text-md pl-12 bg-light_black items-center"
+              className="rounded p-0.5 text-white pl-12 bg-light_black items-center outline-none"
             />
-            <button type="submit">Search</button>
+            <button type="submit" className="bg-slate-100 text-gray px-1 rounded ml-2">Search</button>
           </form>
         </div>
         <div className="flex flex-row text-gray-100 gap-4 absolute right-0 z-10 w-40 origin-top-right rounded-md  py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none text-2xl">

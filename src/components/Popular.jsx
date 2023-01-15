@@ -33,7 +33,7 @@ const Popular = () => {
     infinite: true,
     dots: true,
     slidesToShow: 5,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     lazyLoad: true,
     arrows: false,
     responsive: [

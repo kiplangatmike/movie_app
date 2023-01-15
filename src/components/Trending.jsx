@@ -31,10 +31,42 @@ const Trending = () => {
   const settings = {
     infinite: true,
     dots: true,
-    slidesToShow: 6,
-    slidesToScroll: 2,
+    slidesToShow: 5,
+    slidesToScroll: 1,
     lazyLoad: true,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 1080,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 950,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 620,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
     // fade: true,
     // autoplay: true,
     //   autoplaySpeed: 2000,
