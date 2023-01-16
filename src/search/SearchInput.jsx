@@ -16,12 +16,12 @@ const SearchInput = ({value, onChangeText, onFormSubmit}) => {
         type="text"
         value={value}
         onChange={onChangeText}
-        placeholder="Search everything"
+        placeholder="Search for a movie"
         className="rounded p-0.5 text-white pl-12 bg-light_black items-center outline-none"
       />
       <button
         type="submit"
-        className="bg-slate-100 text-gray px-1 rounded ml-2"
+        className="bg-slate-100 text-slate-600 px-1 rounded ml-2 font-bold"
       >
         Search
       </button>

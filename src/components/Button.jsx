@@ -13,7 +13,9 @@ const Button = ({
   const btn = (
     <button
       onClick={onClick}
-      className={`${loading ? "opacity-60 pointer-events-none" : " hover:opacity-90"} ${
+      className={`${
+        loading ? "opacity-60 pointer-events-none" : " hover:opacity-90"
+      } ${
         outline
           ? "bg-transparent text-primary border border-primary"
           : "bg-primary text-white"

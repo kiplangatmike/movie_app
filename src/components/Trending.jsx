@@ -74,7 +74,7 @@ const Trending = () => {
 
   return (
     // <TrendingCard>
-    <div className="bg-black  my-5 mx-4 pb-2 rounded-2xl">
+    <div className="bg-black  my-5 mx-4 rounded-2xl">
       <TrendingCard>
         <h3 className="pl-6 pt-4 font-bold text-white text-xl">
           Trending Today
