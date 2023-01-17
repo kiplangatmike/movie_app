@@ -44,12 +44,15 @@ const Paragraph=styled.p`
 color: #a1a1a1;
 `
 const ListItem = ({ id,title, caption, imageUrl }) => {
+
+
   return (
     <ListContainer>
       <ListLeft>
         <Thumbnail src={imageUrl} />
       </ListLeft>
       <Center>
+
         <CenterHead>{title}</CenterHead>
         <CenterPar>{caption}</CenterPar>
       </Center>
@@ -59,5 +62,6 @@ const ListItem = ({ id,title, caption, imageUrl }) => {
     </ListContainer>
   );
 };
+
 
 export default ListItem;

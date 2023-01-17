@@ -9,6 +9,7 @@ const SearchInput = ({value, onChangeText, onFormSubmit}) => {
         return input.removeEventListener('input', onChangeText);
     }, []);
 
+    
     return(
   <div className="">
     <form onSubmit={onFormSubmit}>

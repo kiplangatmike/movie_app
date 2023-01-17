@@ -7,6 +7,7 @@ export const fetchSearchResults = async (query) => {
     const response = await fetch(url);
     const jsonData = await response.json();
     return jsonData;
+    
   } else {
     return [];
   }
