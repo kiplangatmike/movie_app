@@ -15,7 +15,7 @@ const Main = () => {
         <div className="flex relative">
           <div className="w-[14%] fixed sidebar max-w-[300px] min-w-[130px] h-full z-50">
           <Title />
-          <SearchBox />
+          
           <Feed />
           <Following />
           <Logout />

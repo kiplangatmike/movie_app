@@ -12,7 +12,7 @@ flex: 0.2;
 `;
 const RightP=styled.p`
 font-size: 32px;
-color: #000;`
+color: #ffffff;`
 
 const ListLeft=styled.div`
     flex: 1;
@@ -30,18 +30,21 @@ const CenterHead=styled.h4`
 margin-block-start: 0px;
 margin-block-end: 8px;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: white;
 `
 
 const CenterPar=styled.p`
 margin-block-start: 0px;
 margin-block-end: 8px;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: white;
 `
 const Head=styled.h4`
 font-weight: 600;
+color: white;
 `;
 const Paragraph=styled.p`
-color: #a1a1a1;
+color: white;
 `
 const ListItem = ({ id,title, caption, imageUrl }) => {
 

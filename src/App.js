@@ -1,24 +1,17 @@
 import logo from "./logo.svg";
 import { BrowserRouter, Route, Switch, Routes, createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Feed from "./components/Feed";
-import Following from "./components/Following";
-import Logout from "./components/Logout";
-import Hero from "./components/Hero";
-import Trending from "./components/Trending";
-import Popular from "./components/Popular";
-import Title from "./components/Title";
-import Banner from "./components/banner/Banner";
 
 import LatestTrailer from "./components/LatestTrailer";
 import { AuthProvider } from "./context/auth-context";
 import SearchBox from "./search/SearchBox";
 import Main from "./Main";
+import ListItem from "./search/ListItem";
 
 function App() {
   const router = createBrowserRouter([
-    {path: '/', element: <Main/>}
+    {path: '/', element: <Main/>},
+    {path: 'listitems', element: <ListItem />}
   ])
   return (
     <RouterProvider router={router}/>
