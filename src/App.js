@@ -1,22 +1,37 @@
 import logo from "./logo.svg";
-import { BrowserRouter, Route, Switch, Routes, createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  Routes,
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 import "./App.css";
 
 import LatestTrailer from "./components/LatestTrailer";
 import { AuthProvider } from "./context/auth-context";
-import SearchBox from "./search/SearchBox";
+// import SearchBox from "./search/SearchBox";
 import Main from "./Main";
 import ListItem from "./search/ListItem";
+import SearchBox from "./search/SearchBox";
+import { Children } from "react";
+import Trending from "./components/Trending";
+import Popular from "./components/Popular";
 
 function App() {
   const router = createBrowserRouter([
-    {path: '/', element: <Main/>},
-    {path: 'listitems', element: <ListItem />}
-  ])
+    {
+      path: "/",
+      element: <Main />,
+      children: [{ path: "searchbox", element: <SearchBox /> }],
+    },
+    { path: "listitems", element: <ListItem /> },
+    { path: "trending", element: <Trending/>},
+    { path: "popular", element: <Popular/>},
+  ]);
   return (
-    <RouterProvider router={router}/>
-    
-
+    <RouterProvider router={router} />
 
     // <AuthProvider>
     //   <div className="bg-[#181818] ">
@@ -43,12 +58,6 @@ function App() {
     //     </div>
     //   </div>
     // </AuthProvider>
-
-
-
-
-
-
 
     // <BrowserRouter className="bg-gray-700">
 
