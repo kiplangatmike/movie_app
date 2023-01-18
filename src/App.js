@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import { BrowserRouter, Route, Switch, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Routes, createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Feed from "./components/Feed";
@@ -14,29 +14,15 @@ import Banner from "./components/banner/Banner";
 import LatestTrailer from "./components/LatestTrailer";
 import { AuthProvider } from "./context/auth-context";
 import SearchBox from "./search/SearchBox";
+import Main from "./Main";
 
 function App() {
+  const router = createBrowserRouter([
+    {path: '/', element: <Main/>}
+  ])
   return (
-    <div className="bg-[#181818] ">
-        <div className="flex relative">
-          <div className="w-[14%] fixed sidebar max-w-[300px] min-w-[130px] h-full z-50">
-          <Title />
-          <SearchBox />
-          <Feed />
-          <Following />
-          <Logout />
-          </div>
-          <div className="w-[85%] ml-[15%] relative">
-        
-              <Navbar />
-              {/* <Banner /> */}
-              <Hero />
-              <Trending />
-              <Popular />
-              <LatestTrailer />
-          </div>
-        </div>
-      </div>
+    <RouterProvider router={router}/>
+    
 
 
     // <AuthProvider>
