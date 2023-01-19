@@ -1,7 +1,9 @@
 import React from "react";
 import { GiEternalLove } from "react-icons/gi";
-import { BsCalendar3 } from "react-icons/bs";
+import { MdOutlineTrendingUp } from "react-icons/md";
 import { FaCompass } from "react-icons/fa";
+import { RiMovie2Fill } from "react-icons/ri";
+import { MdMovie } from "react-icons/md";
 
 export const sidebar = [
     {
@@ -14,14 +16,29 @@ export const sidebar = [
             },
             {
                 name:"Trending",
-                path: "trending",
+                path: "trendingpage",
                 icon: <GiEternalLove></GiEternalLove>
             },
             {
                 name: "Popular",
-                path: "popular",
-                icon: <BsCalendar3></BsCalendar3>
+                path: "popularpage",
+                icon: <MdOutlineTrendingUp></MdOutlineTrendingUp>
             },
         ],
     },
+    {
+        group: "categories",
+        items: [
+            {
+                name: "Series",
+                path: "series",
+                icon: <RiMovie2Fill></RiMovie2Fill>,
+            },
+            {
+                name: "Movies",
+                path: "movies",
+                icon: <MdMovie></MdMovie>,
+            },
+        ]
+    }
 ]

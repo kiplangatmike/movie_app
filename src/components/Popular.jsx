@@ -85,9 +85,9 @@ const Popular = () => {
         {content?.results?.map((item, index) => (
           <SingleCard
             key={index}
-            img={`${img_url}${item.poster_path}`}
+            poster_path={`${img_url}${item.poster_path}`}
             title={item.title}
-            poster={item.release_date}
+            release_date={item.release_date}
           ></SingleCard>
         ))}
       </Slider>

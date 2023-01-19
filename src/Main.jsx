@@ -9,25 +9,27 @@ import Trending from "./components/Trending";
 import Popular from "./components/Popular";
 import LatestTrailer from "./components/LatestTrailer";
 import Sidebar from './components/Sidebar';
+import TrendingPage from "./components/pages/TrendingPage";
 
 const Main = () => {
     return (
         <div className="bg-[#181818] ">
         <div className="flex relative">
           <div className="w-[14%] fixed sidebar max-w-[300px] min-w-[130px] h-full z-50">
-          <Title />
+          {/* <Title /> */}
           <Sidebar />
           <Feed />
           <Following />
           <Logout />
           </div>
-          <div className="w-[85%] ml-[15%] relative">
+          <div className="w-[85%] ml-[15%] relative min-w-[200px]">
         
               <Navbar />
               {/* <Banner /> */}
               <Hero />
               <Trending />
               <Popular />
+              {/* <TrendingPage /> */}
               <LatestTrailer />
           </div>
         </div>

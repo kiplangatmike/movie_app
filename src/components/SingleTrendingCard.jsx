@@ -2,11 +2,10 @@ import { Badge } from "@mui/material";
 import { unavailable, img_300 } from "../config/Config";
 import ContentModal from "./ContentModal";
 
-const SingleCard = ({
+const SingleTrendingCard = ({
   id,
   poster,
   title,
-  release_date,
   date,
   media_type,
   vote_average,
@@ -22,7 +21,7 @@ const SingleCard = ({
     //   </div>
     // </div>
 
-<div className="flex flex-col h-full p-3 text-white rounded-xl select-none movie-card">
+<div className="bg-black flex flex-col h-78 m-4 w-60 p-3 text-white rounded-xl select-none movie-card">
 <div className="relative">
   <img
     className="w-full object-cover rounded-lg mb-5 max-h-[600px]"
@@ -34,7 +33,7 @@ const SingleCard = ({
 <div className="flex flex-col justify-end flex-1">
   <div className="flex items-center justify-between mb-5 text-sm opacity-50">
     <span>
-      {release_date}
+      {date}
     </span>
     
   </div>
@@ -57,4 +56,4 @@ const SingleCard = ({
   );
 };
 
-export default SingleCard;
+export default SingleTrendingCard;

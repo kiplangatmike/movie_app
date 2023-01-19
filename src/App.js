@@ -18,6 +18,10 @@ import SearchBox from "./search/SearchBox";
 import { Children } from "react";
 import Trending from "./components/Trending";
 import Popular from "./components/Popular";
+import TrendingPage from "./components/pages/TrendingPage";
+import PopularPage from "./components/pages/PopularPage";
+import Movies from "./components/pages/Series";
+import Series from "./components/pages/Series";
 
 function App() {
   const router = createBrowserRouter([
@@ -27,8 +31,11 @@ function App() {
       children: [{ path: "searchbox", element: <SearchBox /> }],
     },
     { path: "listitems", element: <ListItem /> },
-    { path: "trending", element: <Trending/>},
+    { path: "trendingpage", element: <TrendingPage/>},
+    { path: "popularpage", element: <PopularPage/>},
     { path: "popular", element: <Popular/>},
+    { path: "movies", element: <Movies/>},
+    { path: "series", element: <Series/>},
   ]);
   return (
     <RouterProvider router={router} />
