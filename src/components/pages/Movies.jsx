@@ -15,6 +15,7 @@ const Series = () => {
     fetch(fetchSeries)
       .then((response) => response.json())
       .then((json) => setContent(json))
+      console.log(content)
     //   .then((json) => setNumOfPages(json));
     window.scroll(0, 0);
   }, [genreforURL, page]);

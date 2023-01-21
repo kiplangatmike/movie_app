@@ -22,6 +22,8 @@ import TrendingPage from "./components/pages/TrendingPage";
 import PopularPage from "./components/pages/PopularPage";
 import Movies from "./components/pages/Series";
 import Series from "./components/pages/Series";
+import Sidebar from "./components/Sidebar";
+import Main2 from "./Main2";
 
 function App() {
   const router = createBrowserRouter([
@@ -30,12 +32,18 @@ function App() {
       element: <Main />,
       children: [{ path: "searchbox", element: <SearchBox /> }],
     },
+    {
+      path: "main2",
+      element: <Main2 />,
+      children: [
+        { path: "trendingpage", element: <TrendingPage /> },
+        { path: "popularpage", element: <PopularPage /> },
+      ],
+    },
     { path: "listitems", element: <ListItem /> },
-    { path: "trendingpage", element: <TrendingPage/>},
-    { path: "popularpage", element: <PopularPage/>},
-    { path: "popular", element: <Popular/>},
-    { path: "movies", element: <Movies/>},
-    { path: "series", element: <Series/>},
+    { path: "popular", element: <Popular /> },
+    { path: "movies", element: <Movies /> },
+    { path: "series", element: <Series /> },
   ]);
   return (
     <RouterProvider router={router} />

@@ -11,29 +11,24 @@ import LatestTrailer from "./components/LatestTrailer";
 import Sidebar from './components/Sidebar';
 import TrendingPage from "./components/pages/TrendingPage";
 
-const Main = () => {
+const Main2 = () => {
     return (
         <div className="bg-[#181818] ">
         <div className="flex relative">
           <div className="w-[15%] fixed sidebar h-full z-50">
           {/* <Title /> */}
           <Sidebar />
-          <Feed />
-          <Following />
-          <Logout />
+    
           </div>
           <div className="w-[85%] ml-[15%] relative ">
         
               <Navbar />
-              {/* <Banner /> */}
+              <TrendingPage />
               <Hero />
-              <Trending />
-              <Popular />
-              <LatestTrailer />
           </div>
         </div>
       </div>
     )
 };
 
-export default Main;
+export default Main2;

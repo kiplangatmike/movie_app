@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { sidebar } from "../base/Sidebar";
 import Button from "./Button";
 import { toast } from "react-toastify";
+import Logout from "./Logout";
 
 const Sidebar = React.forwardRef((props, ref) => {
   const { showNav } = props;
@@ -10,7 +11,7 @@ const Sidebar = React.forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className={` sidebar m-2 rounded-xl absolute overflow-y-auto -translate-x-0 md:relative left:0 w-[100%] max-w-[300px] min-w-[200px] h-full bg-black pt-8 px-4 overflow-auto z-50 "}`}
+      className={` sidebar  rounded-xl absolute overflow-y-auto -translate-x-0 md:relative left:0  h-full bg-black pt-8 px-4 overflow-aut z-50 "}`}
     >
       <h1 className="text-red-600 font-bold text-3xl pb-3">
         <span className="text-white">movie.</span>HUB{" "}
@@ -35,6 +36,7 @@ const Sidebar = React.forwardRef((props, ref) => {
                 </NavLink>
               ))}
             </div>
+            <Logout />
           </div>
         ))}
       </div>
