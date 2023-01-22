@@ -4,6 +4,8 @@ import SingleCard from "../SingleCard";
 import { img_url } from "../../api/Index";
 import CustomPagination from "../pagination/CustomPagination";
 import SingleTrendingCard from "../SingleTrendingCard";
+import Sidebar from "../Sidebar";
+import Navbar from "../Navbar";
 
 const TrendingPage = () => {
   const [timeData, setTimeData] = useState("day");
@@ -18,8 +20,9 @@ const TrendingPage = () => {
     window.scroll(0, 0);
   }, [page]);
   return (
-    <div>
-      <div className="flex flex-wrap">
+    <div className="bg-black">
+      <Navbar/>
+      <div className="flex flex-wrap justify-center bg-black">
         {content?.results?.map((c) => (
           <SingleTrendingCard
             key={c.id}

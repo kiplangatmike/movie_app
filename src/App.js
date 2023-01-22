@@ -24,22 +24,20 @@ import Movies from "./components/pages/Series";
 import Series from "./components/pages/Series";
 import Sidebar from "./components/Sidebar";
 import Main2 from "./Main2";
+import ErrorPage from "./ErrorPage";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Main />,
+      errorElement: <ErrorPage />,
       children: [{ path: "searchbox", element: <SearchBox /> }],
     },
-    {
-      path: "main2",
-      element: <Main2 />,
-      children: [
-        { path: "trendingpage", element: <TrendingPage /> },
-        { path: "popularpage", element: <PopularPage /> },
-      ],
-    },
+
+    { path: "trendingpage", element: <TrendingPage /> },
+    { path: "popularpage", element: <PopularPage /> },
+
     { path: "listitems", element: <ListItem /> },
     { path: "popular", element: <Popular /> },
     { path: "movies", element: <Movies /> },
