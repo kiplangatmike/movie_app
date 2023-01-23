@@ -16,22 +16,22 @@ const Movies = () => {
   useEffect(() => {
     fetch(fetchSeries)
       .then((response) => response.json())
-      .then((json) => setContent(json))
-      console.log(content)
+      .then((json) => setContent(json));
+    console.log(content);
     //   .then((json) => setNumOfPages(json));
     window.scroll(0, 0);
   }, [genreforURL, page]);
   return (
     <div>
-        <span className="pageTitle">Discover Movies</span>
-        <Genres 
+      <span className="pageTitle">Discover Movies</span>
+      <Genres
         type="movie"
         selectedGenres={selectedGenres}
         setSelectedGenres={setSelectedGenres}
         genres={genres}
         setGenres={setGenres}
         setPage={setPage}
-        />
+      />
       {content &&
         content?.results?.map((c) => (
           <SingleTrendingCard
@@ -44,9 +44,9 @@ const Movies = () => {
             vote_average={c.vote_average}
           />
         ))}
-        {numOfPages > 1 && (
-            <CustomPagination setPage={setPage} numberOfpages={numberOfpages}/>
-        )}
+      {numOfPages > 1 && (
+        <CustomPagination setPage={setPage} numberOfpages={numberOfpages} />
+      )}
     </div>
   );
 };

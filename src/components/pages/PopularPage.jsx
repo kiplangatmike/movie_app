@@ -16,7 +16,7 @@ const PopularPage = () => {
       window.scroll(0, 0);
   }, [page]);
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap bg-black justify-center">
       {content &&
         content?.results?.map((c) => (
           <SingleTrendingCard

@@ -9,6 +9,7 @@ import Trending from "./components/Trending";
 import Popular from "./components/Popular";
 import LatestTrailer from "./components/LatestTrailer";
 import Sidebar from './components/Sidebar';
+import Banner from "./components/banner/Banner";
 import TrendingPage from "./components/pages/TrendingPage";
 
 const Main = () => {
