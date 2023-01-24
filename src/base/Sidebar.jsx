@@ -34,11 +34,11 @@ export const sidebar = [
                 path: "series",
                 icon: <RiMovie2Fill></RiMovie2Fill>,
             },
-            {
-                name: "Movies",
-                path: "movies",
-                icon: <MdMovie></MdMovie>,
-            },
+            // {
+            //     name: "Movies",
+            //     path: "movies",
+            //     icon: <MdMovie></MdMovie>,
+            // },
         ]
     }
 ]

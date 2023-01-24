@@ -24,7 +24,7 @@ const Sidebar = React.forwardRef((props, ref) => {
             </p>
             <div className="flex flex-col gap-3 pl-1 ">
               {group.items.map((item) => (
-                <NavLink 
+                <div 
                   to={item.path}
                   key={item.name}
                   className={({ isActive }) =>
@@ -33,7 +33,7 @@ const Sidebar = React.forwardRef((props, ref) => {
                 >
                   {" "}<div className="flex flex-row items-center gap-3 p-2 hover:bg-red-600 rounded-xl"><span className="text-xl flex flex-row">{item.icon}</span> {item.name}</div>
                   
-                </NavLink>
+                </div>
               ))}
             </div>
             <Logout />

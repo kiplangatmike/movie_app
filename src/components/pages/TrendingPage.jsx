@@ -21,8 +21,11 @@ const TrendingPage = () => {
   }, [page]);
   return (
     <div className="bg-black">
-      <Navbar/>
-      <div className="flex flex-wrap justify-center bg-black">
+      {/* <Navbar /> */}
+      <div className="w-[15%] fixed sidebar h-full z-50">
+        <Sidebar />
+      </div>
+      <div className="flex flex-wrap justify-center ml-[15%] bg-black">
         {content?.results?.map((c) => (
           <SingleTrendingCard
             key={c.id}
@@ -34,7 +37,8 @@ const TrendingPage = () => {
             vote_average={c.vote_average}
           />
         ))}
-      </div>\
+      </div>
+      \
       <CustomPagination setPage={setPage} />
     </div>
   );

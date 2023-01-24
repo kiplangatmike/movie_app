@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GiWhiteBook } from "react-icons/gi";
 import { img_url } from "../api/Index";
+import { Route, Routes } from "react-router-dom";
 
 const API_key = process.env.REACT_APP_API_KEY;
 
@@ -73,27 +74,28 @@ const Trending = () => {
   };
 
   return (
-    // <TrendingCard>
-    <div className="bg-black  my-5 mx-4 rounded-2xl">
-      <TrendingCard>
-        <h3 className="pl-6 pt-4 font-bold text-white text-xl">
-          Trending Today
-        </h3>
-      </TrendingCard>
+    <React.Fragment>
+      <div className="bg-black  my-5 mx-4 rounded-2xl">
+        <TrendingCard>
+          <h3 className="pl-6 pt-4 font-bold text-white text-xl">
+            Trending Today
+          </h3>
+        </TrendingCard>
 
-      <Slider {...settings} className="flex flex-wrap pl-6 ">
-        {content?.results?.map((item, index) => (
-          <SingleCard
-            key={index}
-            poster={`${img_url}${item.poster_path}`}
-            title={item.title}
-            release_date={item.release_date}
-          ></SingleCard>
-        ))}
-      </Slider>
-    </div>
-    // </TrendingCard>
+        <Slider {...settings} className="flex flex-wrap pl-6 ">
+          {content?.results?.map((item, index) => (
+            <SingleCard
+              key={index}
+              poster={`${img_url}${item.poster_path}`}
+              title={item.title}
+              release_date={item.release_date}
+            ></SingleCard>
+          ))}
+        </Slider>
+      </div>
+    </React.Fragment>
   );
+  // <TrendingCard>
 };
 
 export default Trending;

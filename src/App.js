@@ -2,10 +2,7 @@ import logo from "./logo.svg";
 import {
   BrowserRouter,
   Route,
-  Switch,
   Routes,
-  createBrowserRouter,
-  RouterProvider,
 } from "react-router-dom";
 import "./App.css";
 
@@ -15,37 +12,45 @@ import { AuthProvider } from "./context/auth-context";
 import Main from "./Main";
 import ListItem from "./search/ListItem";
 import SearchBox from "./search/SearchBox";
-import { Children } from "react";
+import React, { Children } from "react";
 import Trending from "./components/Trending";
 import Popular from "./components/Popular";
 import TrendingPage from "./components/pages/TrendingPage";
 import PopularPage from "./components/pages/PopularPage";
-import Movies from "./components/pages/Series";
+// import Movies from "./components/pages/Series";
 import Series from "./components/pages/Series";
 import Sidebar from "./components/Sidebar";
-import Main2 from "./Main2";
+import NavPath from "./NavPath";
 import ErrorPage from "./ErrorPage";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main />,
-      errorElement: <ErrorPage />,
-      children: [{ path: "searchbox", element: <SearchBox /> }],
-    },
+  // const router = createBrowserRouter([
+  //   {
+  //     path: "/",
+  //     element: <Main />,
+  //     errorElement: <ErrorPage />,
+  //     children: [{ path: "searchbox", element: <SearchBox /> }],
+  //   },
+  //   {
+  //     path: "main2",
+  //     element: <main2 />,
+  //     children: [{ path: "trendingpage", element: <TrendingPage /> }],
+  //   },
 
-    { path: "trendingpage", element: <TrendingPage /> },
-    { path: "popularpage", element: <PopularPage /> },
+  //   { path: "popularpage", element: <PopularPage /> },
 
-    { path: "listitems", element: <ListItem /> },
-    { path: "popular", element: <Popular /> },
-    { path: "movies", element: <Movies /> },
-    { path: "series", element: <Series /> },
-  ]);
+  //   { path: "listitems", element: <ListItem /> },
+  //   { path: "popular", element: <Popular /> },
+  //   { path: "movies", element: <Movies /> },
+  //   { path: "series", element: <Series /> },
+  // ]);
   return (
-    <RouterProvider router={router} />
-
+    // <RouterProvider router={router} />
+    <React.Fragment>
+      <BrowserRouter>
+        <Main />
+      </BrowserRouter>
+    </React.Fragment>
     // <AuthProvider>
     //   <div className="bg-[#181818] ">
     //     <div className="flex relative">
