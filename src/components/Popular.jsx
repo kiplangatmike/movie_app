@@ -68,8 +68,8 @@ const Popular = () => {
         },
       },
     ],
-    // autoplay: true,
-    //   autoplaySpeed: 2000,
+    autoplay: true,
+      autoplaySpeed: 2500,
   };
 
   return (

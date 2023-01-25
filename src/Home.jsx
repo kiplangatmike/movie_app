@@ -6,7 +6,7 @@ import Trending from "./components/Trending";
 const Home = () => {
   return (
     <React.Fragment>
-      <section>
+      <section >
         <Hero />
         <Trending />
         <Popular />

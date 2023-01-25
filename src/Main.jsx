@@ -18,9 +18,6 @@ const Main = () => {
   return (
     <React.Fragment>
       <div className="bg-[#181818] ">
-        {/* <section className="h-[5%] ">
-          <Navbar />
-        </section> */}
         <section>
           <div className="flex flex-row w-[100%] w-full">
             <div className="w-[20%] sidebar fixed md:w-[15%] sm:w-[15%]">
@@ -32,7 +29,7 @@ const Main = () => {
           <Following />
           <Logout /> */}
             </div>
-            <div className="w-[80%] bg-grey ml-[20%] md:w-[84%] md:ml-[15%] sm:w-[85%]">
+            <div className="w-[80%] ml-[20%] md:w-[84%] md:ml-[15%] sm:w-[85%]">
               <div className="">
                 <Navbar />
               </div>

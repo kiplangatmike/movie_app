@@ -68,16 +68,15 @@ const Trending = () => {
         },
       },
     ],
-    // fade: true,
-    // autoplay: true,
-    //   autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 2500,
   };
 
   return (
     <React.Fragment>
       <div className="bg-black  my- mx-4 rounded-2xl">
         <TrendingCard>
-          <h3 className="pl- pt-4 font-bold text-white text-xl">
+          <h3 className="pl-6 pt-4 font-bold text-white text-xl">
             Trending Today
           </h3>
         </TrendingCard>
@@ -95,7 +94,6 @@ const Trending = () => {
       </div>
     </React.Fragment>
   );
-  
 };
 
 export default Trending;

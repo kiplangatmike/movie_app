@@ -4,6 +4,7 @@ import { sidebar } from "../base/Sidebar";
 import Button from "./Button";
 import { toast } from "react-toastify";
 import Logout from "./Logout";
+import Following from "./Following";
 
 const Sidebar = React.forwardRef((props, ref) => {
   const activeLink =
@@ -48,9 +49,10 @@ const Sidebar = React.forwardRef((props, ref) => {
                   </div>
                 ))}
               </NavLink>
-              <Logout />
+              
             </div>
           ))}
+              <Logout />
         </div>
       </div>
     </React.Fragment>

@@ -28,7 +28,7 @@ const Movies = () => {
   }, [genreforURL, page]);
   return (
     <React.Fragment>
-      <div className="flex flex-wrap bg-black mx-4 rounded-xl">
+      <div className="flex flex-wrap bg-black mx-4 rounded-xl justify-center">
         {content &&
           content?.map((c) => (
             <SingleTrendingCard

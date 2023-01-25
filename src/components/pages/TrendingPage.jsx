@@ -20,8 +20,8 @@ const TrendingPage = () => {
     window.scroll(0, 0);
   }, [page]);
   return (
-    <div className="bg-black mx-4 rounded-xl">
-      <div className="flex flex-wrap  bg-black rounded-xl">
+    
+      <div className="flex flex-wrap bg-black justify-center mx-4 rounded-xl">
         {content?.results?.map((c) => (
           <SingleTrendingCard
             key={c.id}
@@ -31,10 +31,9 @@ const TrendingPage = () => {
             date={c.first_air_date || c.release_date}
             media_type={c.media_type}
             vote_average={c.vote_average}
+            className='justify-center'
           />
         ))}
-      </div>
-      \
       <CustomPagination setPage={setPage} />
     </div>
   );
