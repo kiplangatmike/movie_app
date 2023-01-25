@@ -20,8 +20,8 @@ const TrendingPage = () => {
     window.scroll(0, 0);
   }, [page]);
   return (
-    <div className="bg-black">
-      <div className="flex flex-wrap  bg-black">
+    <div className="bg-black mx-4 rounded-xl">
+      <div className="flex flex-wrap  bg-black rounded-xl">
         {content?.results?.map((c) => (
           <SingleTrendingCard
             key={c.id}

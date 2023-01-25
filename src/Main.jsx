@@ -22,9 +22,9 @@ const Main = () => {
           <Navbar />
         </section> */}
         <section>
-          <div className="flex flex-row grid grid-cols-12 w-full">
-            <div className="col-span-3 sidebar h-full md:col-span-2 ">
-              <div className="fixed h-full">
+          <div className="flex flex-row w-[100%] w-full">
+            <div className="w-[20%] sidebar fixed md:w-[15%] sm:w-[15%]">
+              <div className="  h-screen">
                 <Sidebar />
               </div>
 
@@ -32,7 +32,7 @@ const Main = () => {
           <Following />
           <Logout /> */}
             </div>
-            <div className="col-span-9 bg-grey md:col-span-10 content-right ">
+            <div className="w-[80%] bg-grey ml-[20%] md:w-[85%] md:ml-[15%] sm:w-[85%]">
               <div className="">
                 <Navbar />
               </div>

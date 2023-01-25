@@ -19,7 +19,7 @@ const NavPath = () => {
           <Route path="trendingpage" element={<TrendingPage />} />
           <Route path="popularpage" element={<PopularPage />} />
           {/* <Route path="discover" element={<SearchBox />} /> */}
-          {/* <Route path="movies" element={<Movies />} /> */}
+          <Route path="movies" element={<Movies />} />
           <Route path="series" element={<Series />} />
         </Routes>
       </section>

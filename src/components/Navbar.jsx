@@ -13,7 +13,7 @@ import SearchBox from "../search/SearchBox";
 const Navbar = () => {
   return (
     <Card>
-      <nav className=" w-full flex flex-row gap-12 items-center fixed-top  px-2 top-0 left-0">
+      <nav className=" w-full flex flex-row gap- items-center fixed-top  px-2 top-0 left-0">
         <SearchBox />
         {/* <div className="flex flex-row text-gray-100 gap-4 absolute right-0 z-10 w-40 origin-top-right rounded-md  py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none text-2xl">
           <a className="block hover:text-black">
