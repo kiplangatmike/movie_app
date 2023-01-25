@@ -8,31 +8,42 @@ import Hero from "./components/Hero";
 import Trending from "./components/Trending";
 import Popular from "./components/Popular";
 import LatestTrailer from "./components/LatestTrailer";
-import Sidebar from './components/Sidebar';
+import Sidebar from "./components/Sidebar";
 import Banner from "./components/banner/Banner";
 import TrendingPage from "./components/pages/TrendingPage";
 import NavPath from "./NavPath";
+import React from "react";
 
 const Main = () => {
-    return (
-        <div className="bg-[#181818] ">
-        <div className="flex grid grid-col-12 relative">
-        <Navbar />
-          <div className="grid-col-3 fixed sidebar h-full z-50">
-          {/* <Title /> */}
-          
-          <Sidebar />
-          {/* <Feed />
+  return (
+    <React.Fragment>
+      <div className="bg-[#181818] ">
+        {/* <section className="h-[5%] ">
+          <Navbar />
+        </section> */}
+        <section>
+          <div className="flex flex-row grid grid-cols-12 w-full">
+            <div className="col-span-3 sidebar h-full md:col-span-2 ">
+              <div className="fixed h-full">
+                <Sidebar />
+              </div>
+
+              {/* <Feed />
           <Following />
           <Logout /> */}
+            </div>
+            <div className="col-span-9 bg-grey md:col-span-10 content-right ">
+              <div className="">
+                <Navbar />
+              </div>
+
+              <NavPath />
+            </div>
           </div>
-          <div className="grid-col-9 ml-[15%] relative ">
-        
-              <NavPath/>
-          </div>
-        </div>
+        </section>
       </div>
-    )
+    </React.Fragment>
+  );
 };
 
 export default Main;

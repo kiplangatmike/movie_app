@@ -13,23 +13,25 @@ const PopularPage = () => {
     fetch(fetchPopular)
       .then((response) => response.json())
       .then((json) => setContent(json));
-      window.scroll(0, 0);
+    window.scroll(0, 0);
   }, [page]);
   return (
-    <div className="flex flex-wrap bg-black justify-center">
-      {content &&
-        content?.results?.map((c) => (
-          <SingleTrendingCard
-            key={c.id}
-            id={c.id}
-            poster={`${img_url}${c.poster_path}`}
-            title={c.title || c.name}
-            date={c.first_air_date || c.release_date}
-            media_type={c.media_type}
-            vote_average={c.vote_average}
-          />
-        ))}
-    </div>
+    <React.Fragment>
+      <div className="flex flex-wrap bg-black justify-center">
+        {content &&
+          content?.results?.map((c) => (
+            <SingleTrendingCard
+              key={c.id}
+              id={c.id}
+              poster={`${img_url}${c.poster_path}`}
+              title={c.title || c.name}
+              date={c.first_air_date || c.release_date}
+              media_type={c.media_type}
+              vote_average={c.vote_average}
+            />
+          ))}
+      </div>
+    </React.Fragment>
   );
 };
 

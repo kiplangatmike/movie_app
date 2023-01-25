@@ -73,26 +73,30 @@ const Popular = () => {
   };
 
   return (
-    // <TrendingCard>
-    <div className="bg-black  my-5 mx-4 pb- rounded-2xl">
+    <React.Fragment>
+      //{" "}
       <TrendingCard>
-        <h3 className="pl-6 pt-4 font-bold text-white text-xl">
-          What's Popular
-        </h3>
-      </TrendingCard>
+        <div className="bg-black  my-5 mx-4 pb- rounded-2xl">
+          <TrendingCard>
+            <h3 className="pl-6 pt-4 font-bold text-white text-xl">
+              What's Popular
+            </h3>
+          </TrendingCard>
 
-      <Slider {...settings} className="flex flex-wrap pl-6 ">
-        {content?.results?.map((item, index) => (
-          <SingleCard
-            key={index}
-            poster={`${img_url}${item.poster_path}`}
-            title={item.title}
-            release_date={item.release_date}
-          ></SingleCard>
-        ))}
-      </Slider>
-    </div>
-    // </TrendingCard>
+          <Slider {...settings} className="flex flex-wrap pl-6 ">
+            {content?.results?.map((item, index) => (
+              <SingleCard
+                key={index}
+                poster={`${img_url}${item.poster_path}`}
+                title={item.title}
+                release_date={item.release_date}
+              ></SingleCard>
+            ))}
+          </Slider>
+        </div>
+        //{" "}
+      </TrendingCard>
+    </React.Fragment>
   );
 };
 

@@ -21,11 +21,7 @@ const TrendingPage = () => {
   }, [page]);
   return (
     <div className="bg-black">
-      {/* <Navbar /> */}
-      <div className="w-[15%] fixed sidebar h-full z-50">
-        <Sidebar />
-      </div>
-      <div className="flex flex-wrap justify-center ml-[15%] bg-black">
+      <div className="flex flex-wrap  bg-black">
         {content?.results?.map((c) => (
           <SingleTrendingCard
             key={c.id}
