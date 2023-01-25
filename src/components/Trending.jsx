@@ -95,7 +95,7 @@ const Trending = () => {
       </div>
     </React.Fragment>
   );
-  // <TrendingCard>
+  
 };
 
 export default Trending;

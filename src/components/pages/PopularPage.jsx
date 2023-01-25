@@ -17,7 +17,7 @@ const PopularPage = () => {
   }, [page]);
   return (
     <React.Fragment>
-      <div className="flex flex-wrap bg-black justify-center">
+      <div className="flex flex-wrap bg-black justify-center mx-4 rounded-xl">
         {content &&
           content?.results?.map((c) => (
             <SingleTrendingCard

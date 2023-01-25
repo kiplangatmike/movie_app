@@ -74,7 +74,7 @@ const Popular = () => {
 
   return (
     <React.Fragment>
-      //{" "}
+      
       <TrendingCard>
         <div className="bg-black  my-5 mx-4 pb- rounded-2xl">
           <TrendingCard>
@@ -94,7 +94,7 @@ const Popular = () => {
             ))}
           </Slider>
         </div>
-        //{" "}
+        
       </TrendingCard>
     </React.Fragment>
   );

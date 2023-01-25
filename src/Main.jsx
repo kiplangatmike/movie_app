@@ -32,7 +32,7 @@ const Main = () => {
           <Following />
           <Logout /> */}
             </div>
-            <div className="w-[80%] bg-grey ml-[20%] md:w-[85%] md:ml-[15%] sm:w-[85%]">
+            <div className="w-[80%] bg-grey ml-[20%] md:w-[84%] md:ml-[15%] sm:w-[85%]">
               <div className="">
                 <Navbar />
               </div>
