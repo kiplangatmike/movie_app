@@ -36,7 +36,6 @@ const Sidebar = React.forwardRef((props, ref) => {
                       isActive ? "active sidebar-item" : "sidebar-item "
                     }
                   >
-                    {" "}
                     <NavLink
                       to={item.path}
                       className={({ isActive }) =>
@@ -49,10 +48,9 @@ const Sidebar = React.forwardRef((props, ref) => {
                   </div>
                 ))}
               </NavLink>
-              
             </div>
           ))}
-              <Logout />
+          <Logout />
         </div>
       </div>
     </React.Fragment>
