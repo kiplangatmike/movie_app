@@ -18,7 +18,7 @@ const TrendingPage = () => {
     fetch(fetchtrending)
       .then((response) => response.json())
       .then((json) => setContent(json));
-      isPending(false)
+      setIsPending(false)
     window.scroll(0, 0);
   }, [page]);
   return (
