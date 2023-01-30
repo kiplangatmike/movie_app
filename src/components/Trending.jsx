@@ -15,7 +15,7 @@ const Trending = () => {
   const [timeData, setTimeData] = useState("day");
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
-  const [isPending, setIsPending] = useState(true);
+
   const fetchTrending = `https://api.themoviedb.org/3/trending/movie/${timeData}?api_key=14ccdb96456935bbb41591e99697d262`;
 
   useEffect(() => {
@@ -23,7 +23,6 @@ const Trending = () => {
       .then((response) => response.json())
       .then((json) => {
         setContent(json);
-        setIsPending(false)
       });
     window.scroll(0, 0);
   }, [timeData]);
@@ -77,7 +76,6 @@ const Trending = () => {
     <React.Fragment>
       <div className="bg-black  my- mx-4 rounded-2xl">
         <TrendingCard>
-        {isPending && <div>Loading</div>}
           <h3 className="pl-6 pt-4 font-bold text-white text-xl">
             Trending Today
           </h3>
