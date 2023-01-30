@@ -11,17 +11,20 @@ const TrendingPage = () => {
   const [timeData, setTimeData] = useState("day");
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
+  const [isPending, setIsPending] = useState(true);
   const fetchtrending = `https://api.themoviedb.org/3/trending/movie/${timeData}?api_key=14ccdb96456935bbb41591e99697d262`;
 
   useEffect(() => {
     fetch(fetchtrending)
       .then((response) => response.json())
       .then((json) => setContent(json));
+      isPending(false)
     window.scroll(0, 0);
   }, [page]);
   return (
-    
+      
       <div className="flex flex-wrap bg-black justify-center mx-4 rounded-xl">
+        {isPending && <div>Loading</div>}
         {content?.results?.map((c) => (
           <SingleTrendingCard
             key={c.id}
