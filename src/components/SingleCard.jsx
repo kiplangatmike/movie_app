@@ -25,10 +25,11 @@ const SingleCard = ({
   <div className="flex items-center justify-between mb-5 text-sm opacity-50">
     <span>
       {release_date}
+      <button fluid>Watch Now</button>
     </span>
     
   </div>
-    <button fluid>Watch Now</button>
+    {/* <button fluid>Watch Now</button> */}
 </div>
 </div>
 
