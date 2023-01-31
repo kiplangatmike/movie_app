@@ -21,7 +21,7 @@ const SingleTrendingCard = ({
     //   </div>
     // </div>
 
-<div className="bg-black flex flex-col h-78 m-4 w-60 p-3 text-white rounded-xl select-none movie-card">
+<div className="hover:bg-red-600 bg-black flex flex-col h-78 m-4 w-60 p-3 text-white rounded-xl select-none movie-card">
 <div className="relative">
   <img
     className="w-full object-cover rounded-lg mb-5 max-h-[600px]"

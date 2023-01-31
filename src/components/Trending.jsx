@@ -8,10 +8,11 @@ import "slick-carousel/slick/slick-theme.css";
 import { GiWhiteBook } from "react-icons/gi";
 import { img_url } from "../api/Index";
 import { Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const API_key = process.env.REACT_APP_API_KEY;
 
-const Trending = () => {
+const Trending = (props) => {
   const [timeData, setTimeData] = useState("day");
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
@@ -83,12 +84,13 @@ const Trending = () => {
 
         <Slider {...settings} className="flex flex-wrap pl-6 ">
           {content?.results?.map((item, index) => (
+            <Link to={`/detailspage/${item.id} `} style={{ color: '#323232',textDecoration: 'none' }}>
             <SingleCard
               key={index}
               poster={`${img_url}${item.poster_path}`}
               title={item.title}
               release_date={item.release_date}
-            ></SingleCard>
+            ></SingleCard></Link>
           ))}
         </Slider>
       </div>

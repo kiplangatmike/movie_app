@@ -12,17 +12,7 @@ const SingleCard = ({
   vote_average,
 }) => {
   return (
-    // <div className="flex flex-col pb-2">
-    //   <div className="w-42  rounded-xl p-4 bg-yello 0 mt-3 mr-4 flex flex-col drop-shadow-md">
-    //     <img src={img} alt="" className="rounded-xl object-fill h-54 w-50" />
-    //     <div className="">
-    //       <p className="text-white font-bold">{title}</p>
-    //       <p className="text-white absolute bottom-0 left-4">{poster}</p>
-    //     </div>
-    //   </div>
-    // </div>
-
-<div className="flex flex-col h-full p-3 text-white rounded-xl select-none movie-card" path="trendingpage">
+<div className="hover:bg-red-600 flex flex-col h-full p-3 text-white rounded-xl select-none movie-card" path="trendingpage">
 <div className="relative">
   <img
     className="w-full object-cover rounded-lg mb-5 max-h-[600px]"
@@ -38,7 +28,7 @@ const SingleCard = ({
     </span>
     
   </div>
-    {/* <button fluid>Watch Now</button> */}
+    <button fluid>Watch Now</button>
 </div>
 </div>
 

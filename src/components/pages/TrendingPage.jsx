@@ -6,6 +6,7 @@ import CustomPagination from "../pagination/CustomPagination";
 import SingleTrendingCard from "../SingleTrendingCard";
 import Sidebar from "../Sidebar";
 import Navbar from "../Navbar";
+import { Link } from "react-router-dom"
 
 const TrendingPage = () => {
   const [timeData, setTimeData] = useState("day");
@@ -23,6 +24,7 @@ const TrendingPage = () => {
     
       <div className="flex flex-wrap bg-black justify-center mx-4 rounded-xl">
         {content?.results?.map((c) => (
+          <Link to={`/detailspage/${c.id} `} style={{ color: '#323232',textDecoration: 'none' }}>
           <SingleTrendingCard
             key={c.id}
             id={c.id}
@@ -32,7 +34,7 @@ const TrendingPage = () => {
             media_type={c.media_type}
             vote_average={c.vote_average}
             className='justify-center'
-          />
+          /></Link>
         ))}
       <CustomPagination setPage={setPage} />
     </div>

@@ -3,6 +3,7 @@ import { img_url } from "../../api/Index";
 import SingleTrendingCard from "../SingleTrendingCard";
 import useGenre from '../../hooks/useGenre';
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Series = () => {
   const [genres, setGenres] = useState([]);
@@ -31,6 +32,7 @@ const Series = () => {
       <div className="flex flex-wrap bg-black mx-4 rounded-xl justify-center">
         {content &&
           content?.map((c) => (
+            <Link to={`/detailspage/${c.id} `} style={{ color: '#323232',textDecoration: 'none' }}>
             <SingleTrendingCard
               key={c.id}
               id={c.id}
@@ -39,7 +41,7 @@ const Series = () => {
               date={c.first_air_date || c.release_date}
               media_type={c.media_type}
               vote_average={c.vote_average}
-            />
+            /></Link>
           ))}
       </div>
     </React.Fragment>

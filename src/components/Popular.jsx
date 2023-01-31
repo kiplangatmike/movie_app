@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { img_url } from "../api/Index";
+import { Link } from "react-router-dom";
 
 const Popular = () => {
   const [page, setPage] = useState(1);
@@ -85,12 +86,13 @@ const Popular = () => {
 
           <Slider {...settings} className="flex flex-wrap pl-6 ">
             {content?.results?.map((item, index) => (
+              <Link to={`/detailspage/${item.id} `} style={{ color: '#323232',textDecoration: 'none' }}>
               <SingleCard
                 key={index}
                 poster={`${img_url}${item.poster_path}`}
                 title={item.title}
                 release_date={item.release_date}
-              ></SingleCard>
+              ></SingleCard></Link>
             ))}
           </Slider>
         </div>
