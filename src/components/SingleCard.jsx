@@ -15,7 +15,7 @@ const SingleCard = ({
 <div className="hover:bg-red-600 flex flex-col h-full p-3 text-white rounded-xl select-none movie-card" path="trendingpage">
 <div className="relative">
   <img
-    className="w-full object-cover rounded-lg mb-5 max-h-[600px]"
+    className="w-full object-cover rounded-lg mb-5 max-h-[600px] hover:opacity-50"
     src={poster}
     alt=""
   />
