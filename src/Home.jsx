@@ -8,6 +8,8 @@ const Home = () => {
     <React.Fragment>
       <section >
         <Hero />
+
+        
         <Trending />
         <Popular />
       </section>
